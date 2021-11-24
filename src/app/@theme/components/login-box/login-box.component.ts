@@ -25,6 +25,5 @@ export class LoginBoxComponent{
 
   onSubmit(): void{
     console.log(this.getClientData());
-    
   }
 }

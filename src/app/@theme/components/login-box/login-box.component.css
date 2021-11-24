@@ -11,7 +11,7 @@
     font-size: 56px;
     line-height: 66px;
 
-    color: #006D77;
+    color: var(--logo);
 }
 
 .msg {
@@ -27,7 +27,7 @@
     font-size: 15px;
     line-height: 19px;
     
-    color: #7C8D93;
+    color: var(--light-grey);
 }
 
 .gbutton {
@@ -51,6 +51,6 @@
     left: 953px;
     top: 492px;
 
-    background: #006D77;
+    background: var(--deep-grey);
     border-radius: 4px;
 }
