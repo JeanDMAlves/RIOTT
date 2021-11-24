@@ -1,13 +1,20 @@
 import { NgModule } from "@angular/core";
-import { WelcomeComponent } from "./components/welcome/welcome.component";
+import { LoginBoxComponent } from './components/login-box/login-box.component';
+import { LoginScreenComponent } from './components/login-screen/login-screen.component';
+import { MaterialExampleModule } from '../../material.module';
 
 @NgModule({
+    imports: [
+        MaterialExampleModule
+    ],
 	declarations: [
-		WelcomeComponent,
-	],
-	providers: [],
+        LoginBoxComponent,
+        LoginScreenComponent
+    ],
+	providers: [ ],
     exports: [
-        WelcomeComponent
+        LoginBoxComponent,
+        LoginScreenComponent   
     ]
 })
 export class ThemeModule { }
