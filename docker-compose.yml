@@ -1,12 +1,12 @@
 version: "3"
 services:
-    riott-web:
+    riott-app:
         build:
             context: .
             dockerfile: Dockerfile
         ports:
             - "4200:4200"
-        container_name: riott
+        container_name: riott-app
         volumes:
             - ./:/usr/src/app
             - /usr/src/app/node_modules
