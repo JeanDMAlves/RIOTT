@@ -3,13 +3,13 @@
 <p class="msg">Controle as tarefas e mesadas dos seus filhos para manter a casa em harmonia.</p>
 
 <section class="input">
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="email">
         <mat-label>E-mail</mat-label>
         <input matInput placeholder="Email@gmail.com" [formControl]="email" required>
         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="senha">
         <mat-label>Senha</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">

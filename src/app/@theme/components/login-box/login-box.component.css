@@ -51,6 +51,24 @@
     left: 953px;
     top: 492px;
 
-    background: var(--deep-grey);
+    /* background: var(--deep-grey); */
     border-radius: 4px;
+
+    background: #006D77;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #006D77!important;
+}
+
+.email {
+    width: 306px;
+    left: 953px;
+    top: 326px;
+}
+
+.senha {
+    width: 306px;
+    left: 647px;
+    top: 410px;
 }
