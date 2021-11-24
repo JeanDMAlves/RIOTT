@@ -57,9 +57,21 @@
     background: #006D77;
 }
 
+/* cor do outliner */
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #7C8D93!important;
+}
+
+/* cor quando focado */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
     color: #006D77!important;
 }
+
+/* Cor da caixa ao dar inserir campo invalido */
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: #006D77!important;
+}
+
 
 .email {
     width: 306px;
