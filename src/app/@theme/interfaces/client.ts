@@ -1,4 +1,4 @@
 export interface IClient {
     email:string,
-    senha:string
+    password:string
 }

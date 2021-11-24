@@ -1,18 +1,30 @@
+import { IClient } from './../../interfaces/client';
+
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Validators, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login-box',
   templateUrl: './login-box.component.html',
   styleUrls: ['./login-box.component.css']
 })
 export class LoginBoxComponent{
-  hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
+  public hide: boolean = true;
+  public email: FormControl = new FormControl('', [Validators.required, Validators.email])
+  public password: FormControl = new FormControl('')
 
-  getErrorMessage(): string {
+  public getErrorMessage(): string {
     if (this.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'Você deve digitar seu email';
     }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.email.hasError('email') ? 'Não é um email válido' : '';
+  }
+
+  private getClientData(): IClient{
+    return {email:this.email.value, password:this.password.value};
+  }
+
+  onSubmit(): void{
+    console.log(this.getClientData());
+    
   }
 }
