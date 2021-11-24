@@ -1,0 +1,31 @@
+.logo {
+    position: absolute;
+    width: 161px;
+    height: 66px;
+    left: 1023px;
+    top: 182px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 66px;
+
+    color: #006D77;
+}
+
+.msg {
+    position: absolute;
+    width: 282px;
+    height: 38px;
+    left: 965px;
+    top: 264px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    
+    color: #7C8D93;
+}
