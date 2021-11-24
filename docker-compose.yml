@@ -6,7 +6,7 @@ services:
             dockerfile: Dockerfile
         ports:
             - "4200:4200"
-        container_name: riott-web
+        container_name: riott
         volumes:
             - ./:/usr/src/app
             - /usr/src/app/node_modules
