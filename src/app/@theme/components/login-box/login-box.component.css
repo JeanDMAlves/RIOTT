@@ -11,7 +11,7 @@
     font-size: 56px;
     line-height: 66px;
 
-    color: var(--logo);
+    color: var(--primary-dark);
 }
 
 .msg {
@@ -27,7 +27,7 @@
     font-size: 15px;
     line-height: 19px;
     
-    color: var(--light-grey);
+    color: var(--grayscale-4);
 }
 
 .gbutton {
@@ -51,27 +51,25 @@
     left: 953px;
     top: 492px;
 
-    /* background: var(--deep-grey); */
     border-radius: 4px;
 
-    background: #006D77;
+    background: var(--primary-dark);
 }
 
 /* cor do outliner */
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: #7C8D93!important;
+    color: var(--grayscale-4)!important;
 }
 
 /* cor quando focado */
 ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #006D77!important;
+    color: var(--primary-dark)!important;
 }
 
 /* Cor da caixa ao dar inserir campo invalido */
 ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: #006D77!important;
+    color: var(--primary-dark)!important;
 }
-
 
 .email {
     width: 306px;
