@@ -1,10 +1,4 @@
 .logo {
-    position: absolute;
-    width: 161px;
-    height: 66px;
-    left: 1023px;
-    top: 182px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -15,19 +9,14 @@
 }
 
 .msg {
-    position: absolute;
     width: 282px;
-    height: 38px;
-    left: 965px;
-    top: 264px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 19px;
-    
     color: var(--grayscale-4);
+    text-align: center;
 }
 
 .gbutton {
@@ -44,13 +33,7 @@
     justify-content: center;
     align-items: center;
     padding: 16px 24px;
-
-    position: absolute;
-    width: 306px;
-    height: 51px;
-    left: 953px;
-    top: 492px;
-
+    width: 100%;
     border-radius: 4px;
 
     background: var(--primary-dark);
@@ -73,12 +56,19 @@
 
 .email {
     width: 306px;
-    left: 953px;
-    top: 326px;
 }
 
 .senha {
     width: 306px;
-    left: 647px;
-    top: 410px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 306px;
+    height: 361px;
+    position: absolute;
 }
