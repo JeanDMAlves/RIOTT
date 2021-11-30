@@ -1,7 +1,8 @@
-
+import { LoggedComponent } from './logged/logged.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PagesComponent } from "./pages.component";
+import { LoginScreenComponent } from './login/login-screen/login-screen.component';
 
 const routes: Routes = [
 	{
@@ -9,8 +10,13 @@ const routes: Routes = [
 		component: PagesComponent,
         children: [
 			{
-				path: 'example',
+				path: 'login',
+				component: LoginScreenComponent,
 			},
+			{
+				path: 'logged',
+				component: LoggedComponent,
+			}
         ],
 	},
 ];
