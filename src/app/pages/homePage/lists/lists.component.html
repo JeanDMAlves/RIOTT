@@ -1,18 +1,12 @@
 <mat-drawer-container>
+
     <mat-drawer mode="side" opened>
         <h2 class="titulo-lista-membros">Listas:</h2>
-        <mat-card>
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Luisa Sousa</mat-card-title>
-                <mat-card-subtitle>Mesada:</mat-card-subtitle>
-                <mat-card-subtitle>Descontos:</mat-card-subtitle>
-                <mat-card-subtitle>Total:</mat-card-subtitle>
-            </mat-card-header>
-        </mat-card>
+        <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
     </mat-drawer>
 
     <mat-drawer-content>
         <h3>Lista:</h3>
     </mat-drawer-content>
+
 </mat-drawer-container>

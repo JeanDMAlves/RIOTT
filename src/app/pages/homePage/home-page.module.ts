@@ -7,6 +7,7 @@ import { NavegationHeaderComponent } from './navegation-header/navegation-header
 import { ListsComponent } from './lists/lists.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { HomePageComponent } from './home-page.component';
+import { ListMemberItemComponent } from './lists/list-member-item/list-member-item.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomePageComponent } from './home-page.component';
     NavegationHeaderComponent,
     ListsComponent,
     ActivitiesComponent,
-    HomePageComponent
+    HomePageComponent,
+    ListMemberItemComponent
   ],
   imports: [
     CommonModule,
