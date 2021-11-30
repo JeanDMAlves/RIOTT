@@ -1,4 +1,4 @@
-import { LoggedComponent } from './logged/logged.component';
+import { HomePageComponent } from './homePage/home-page.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PagesComponent } from "./pages.component";
@@ -14,8 +14,8 @@ const routes: Routes = [
 				component: LoginScreenComponent,
 			},
 			{
-				path: 'logged',
-				component: LoggedComponent,
+				path: 'home',
+				component: HomePageComponent,
 			}
         ],
 	},
