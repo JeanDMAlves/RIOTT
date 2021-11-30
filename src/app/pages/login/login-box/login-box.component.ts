@@ -10,13 +10,19 @@ import { Validators, FormControl } from '@angular/forms';
 export class LoginBoxComponent{
   public hide: boolean = true;
   public email: FormControl = new FormControl('', [Validators.required, Validators.email])
-  public password: FormControl = new FormControl('')
+  public password: FormControl = new FormControl('', [Validators.required])
 
-  public getErrorMessage(): string {
+  public getEmailErrorMessage(): string {
     if (this.email.hasError('required')) {
-      return 'Você deve digitar seu email';
+      return 'Este campo é obrigatório';
     }
-    return this.email.hasError('email') ? 'Não é um email válido' : '';
+    return this.email.hasError('email') ? 'Digite um email válido' : '';
+  }
+  public getPasswordErrorMessage(): any {
+    if (this.password.hasError('required')) {
+      return 'Este campo é obrigatório';
+    }
+    return this.password.hasError('minlength') ? 'Senha muito curta' : '';
   }
 
   private getClientData(): IClient{
