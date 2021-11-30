@@ -1,0 +1,46 @@
+mat-drawer-container{
+    height: 90vh;
+    width: 90%;
+    margin: 1.5rem auto 0 auto;
+}
+
+mat-drawer{
+    background: red;
+    margin: 0 2rem 0 0;
+    width: 320px;
+}
+
+.titulo-lista-membros{
+    color: var(--greyscale-5);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+mat-card{
+    width: 272px;
+    height: 120px;
+    border: 1px solid #dee8eb;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+mat-card-header{
+    width: 90%;
+}
+
+mat-card-title{
+    color:var(--greyscale-5);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
