@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    height: 86px;
+    border-bottom: 1px solid var(--grayscale-2);
+}
+
+.logo-header{
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 3.5px;
+    font-family: Roboto;
+    margin: 24px 0 24px 56px
+}
+
+.nav-header{
+    width: 376px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    line-height: 19px;
+    margin-right: 56px;
+    padding: 0;
+    color: var(--grayscale-4);
+}
+
+.nav-item{
+    margin-right: 16px;
+}
+
+.nav-item:target{
+    background: red;
+}
+
+.nav-item:last-child{
+    color:var(--secundary-dark)
+}
