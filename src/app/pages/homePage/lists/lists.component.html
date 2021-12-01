@@ -2,11 +2,28 @@
 
     <mat-drawer mode="side" opened>
         <h2 class="titulo-lista-membros">Listas:</h2>
-        <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
+        <div class = "lista-membros">
+            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
+            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
+            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
+        </div>
+        <app-manage-button></app-manage-button>
     </mat-drawer>
 
     <mat-drawer-content>
-        <h3>Lista:</h3>
+        <div class="lista-atividades">
+            <h3 class="lista-atividades-titulo">Lista:</h3>
+            <div class="lista-atividades-items">
+                <app-list-member-activities activityValue=300 activityDescription="Tirar o lixo"></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities></app-list-member-activities>
+            </div>
+        </div>
     </mat-drawer-content>
 
 </mat-drawer-container>

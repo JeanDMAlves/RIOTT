@@ -1,0 +1,6 @@
+.botao-gerenciar{
+    background: var(--primary-light);
+    color: #ffffff;
+    width: 302px;
+    align-self: flex-end;
+}

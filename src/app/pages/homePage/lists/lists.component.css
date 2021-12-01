@@ -18,8 +18,58 @@ mat-drawer{
     text-align: left;
 }
 
+.lista-membros{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
 
+.lista-membros::-webkit-scrollbar{
+    background: var(--grayscale-2);
+    border-radius: 90px;
+    width: 8px;
+}
 
+.lista-membros::-webkit-scrollbar-thumb{
+    background: var(--grayscale-3);
+    border-radius: 90px;
+}
 
+mat-drawer-content{
+    background: #ffffff;
+}
 
+.lista-atividades{
+    width: 95%;
+    height: 74px;
+    margin: 0 auto;
+}
 
+.lista-atividades-titulo{
+    color: var(--grayscale-5);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.lista-atividades-items{
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.lista-atividades-items::-webkit-scrollbar{
+    background: var(--grayscale-2);
+    border-radius: 90px;
+    width: 8px;
+}
+
+.lista-atividades-items::-webkit-scrollbar-thumb{
+    background: var(--grayscale-3);
+    border-radius: 90px;
+}
