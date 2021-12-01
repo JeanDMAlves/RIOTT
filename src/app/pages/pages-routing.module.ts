@@ -1,5 +1,4 @@
-import { HomePageComponent } from './homePage/home-page.component';
-import { NgModule } from "@angular/core";
+import { NgModule, NgModuleFactory, Type } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PagesComponent } from "./pages.component";
 import { LoginScreenComponent } from './login/login-screen/login-screen.component';
@@ -15,10 +14,10 @@ const routes: Routes = [
 			},
 			{
 				path: 'home',
-				component: HomePageComponent,
+                loadChildren: (): Promise<NgModuleFactory<any> | Type<any> | any> => import('./home/home.module').then(module => module.HomeModule),
 			}
-        ],
-	},
+        ]
+	}
 ];
 
 @NgModule({

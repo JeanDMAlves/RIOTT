@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-header {
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 3.5px;
+    font-family: Roboto;
+    margin: 24px 0 24px 56px;
+}
