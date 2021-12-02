@@ -27,17 +27,6 @@ mat-drawer{
     margin-bottom: 2rem;
 }
 
-.lista-membros::-webkit-scrollbar{
-    background: var(--grayscale-2);
-    border-radius: 90px;
-    width: 8px;
-}
-
-.lista-membros::-webkit-scrollbar-thumb{
-    background: var(--grayscale-3);
-    border-radius: 90px;
-}
-
 mat-drawer-content{
     background: #ffffff;
 }
@@ -63,13 +52,14 @@ mat-drawer-content{
     overflow-x: auto;
 }
 
-.lista-atividades-items::-webkit-scrollbar{
-    background: var(--grayscale-2);
+.lista-atividades-items::-webkit-scrollbar, .lista-membros::-webkit-scrollbar{
     border-radius: 90px;
-    width: 8px;
+    width: 32px;
 }
 
-.lista-atividades-items::-webkit-scrollbar-thumb{
+.lista-atividades-items::-webkit-scrollbar-thumb, .lista-membros::-webkit-scrollbar-thumb{
     background: var(--grayscale-3);
     border-radius: 90px;
+    border: 12px solid transparent;
+    background-clip: content-box;
 }
