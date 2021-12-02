@@ -11,8 +11,8 @@ import {NgModule} from '@angular/core';
 // import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // import {MatBadgeModule} from '@angular/material/badge';
 // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-// import {MatButtonModule} from '@angular/material/button';
-// import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatCardModule} from '@angular/material/card';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
 // import {MatChipsModule} from '@angular/material/chips';
@@ -22,8 +22,8 @@ import {NgModule} from '@angular/core';
 // import {MatDividerModule} from '@angular/material/divider';
 // import {MatExpansionModule} from '@angular/material/expansion';
 // import {MatGridListModule} from '@angular/material/grid-list';
-// import {MatIconModule} from '@angular/material/icon';
-// import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 // import {MatListModule} from '@angular/material/list';
 // import {MatMenuModule} from '@angular/material/menu';
 // import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
@@ -43,6 +43,7 @@ import {NgModule} from '@angular/core';
 // import {MatTooltipModule} from '@angular/material/tooltip';
 // import {MatTreeModule} from '@angular/material/tree';
 // import {OverlayModule} from '@angular/cdk/overlay';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 @NgModule({
   exports: [
@@ -56,8 +57,8 @@ import {NgModule} from '@angular/core';
     // MatAutocompleteModule,
     // MatBadgeModule,
     // MatBottomSheetModule,
-    // MatButtonModule,
-    // MatButtonToggleModule,
+    MatButtonModule,
+    MatButtonToggleModule,
     // MatCardModule,
     // MatCheckboxModule,
     // MatChipsModule,
@@ -67,8 +68,8 @@ import {NgModule} from '@angular/core';
     // MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
-    // MatIconModule,
-    // MatInputModule,
+    MatIconModule,
+    MatInputModule,
     // MatListModule,
     // MatMenuModule,
     // MatNativeDateModule,
@@ -91,6 +92,7 @@ import {NgModule} from '@angular/core';
     // OverlayModule,
     // PortalModule,
     // ScrollingModule,
+    MatFormFieldModule,
   ]
 })
 export class MaterialModule {}

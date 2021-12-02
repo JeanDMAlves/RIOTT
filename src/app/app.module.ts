@@ -1,4 +1,4 @@
-import { MaterialExampleModule } from './../material.module';
+import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialExampleModule
+    MaterialModule
 ],
   providers: [],
   bootstrap: [AppComponent]
