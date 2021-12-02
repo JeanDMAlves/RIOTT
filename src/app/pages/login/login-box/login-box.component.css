@@ -1,6 +1,4 @@
 .logo {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 66px;
@@ -10,8 +8,6 @@
 
 .welcome-message {
     width: 282px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
@@ -20,8 +16,6 @@
 }
 
 .green-button {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
