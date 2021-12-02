@@ -1,5 +1,4 @@
-import { IClient } from '../../../@theme/interfaces/Iclient';
-
+import { IClient } from '../../../@theme/interfaces/IClient';
 import { Component } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
 @Component({

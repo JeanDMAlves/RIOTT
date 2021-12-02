@@ -1,5 +1,5 @@
-import { IClientChildren } from './../../@theme/interfaces/iclient-children';
-import { IClient } from '../../@theme/interfaces/Iclient';
+import { IClientChildren } from '../../@theme/interfaces/IClientChildren';
+import { IClient } from '../../@theme/interfaces/IClient';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
