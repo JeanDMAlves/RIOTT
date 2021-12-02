@@ -48,3 +48,5 @@ export class LoginBoxComponent{
     console.log(this.getClientData());
   }
 }
+
+///TODO - Deixar chamando o service de API, deixar o método pronto para quando integrar com a API

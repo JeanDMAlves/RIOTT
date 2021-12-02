@@ -26,3 +26,6 @@ export class StorageService {
     response.subscribe(children => this.childrenList.push(children));
   }
 }
+
+///TODO - criar o método genérico que aceita os diferentes tipos de requisições.
+///link de referência: https://www.positronx.io/angular-7-httpclient-http-service/#tc_1202_07
