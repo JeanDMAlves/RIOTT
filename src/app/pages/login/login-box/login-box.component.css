@@ -63,6 +63,8 @@
 }
 
 .input {
+    top: 100px;
+    margin-left: 63%;
     display: flex;
     justify-content: center;
     flex-direction: column;
