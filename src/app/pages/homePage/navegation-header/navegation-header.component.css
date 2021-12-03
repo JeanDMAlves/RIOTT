@@ -41,3 +41,30 @@
 .nav-item:last-child{
     color:var(--secundary-dark)
 }
+/* estilo das labels */
+.mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: var(--grayscale-4);
+    font-weight: 700;
+}
+
+/* estilo da label selecionada */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* estilo da barra inferior */
+.mat-ink-bar {
+    padding: 1px;
+    border-radius: 3px;
+}
+/* cor da barra inferior */
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background: var(--secundary-dark);
+}
