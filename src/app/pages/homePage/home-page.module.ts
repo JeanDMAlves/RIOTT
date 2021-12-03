@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page.component';
 import { ListMemberItemComponent } from './lists/list-member-item/list-member-item.component';
 import { ManageButtonComponent } from './lists/manage-button/manage-button.component';
 import { ListMemberActivitiesComponent } from './lists/list-member-activities/list-member-activities.component';
+import { ListMemberAbsencesComponent } from './lists/list-member-absences/list-member-absences.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ListMemberActivitiesComponent } from './lists/list-member-activities/li
     HomePageComponent,
     ListMemberItemComponent,
     ManageButtonComponent,
-    ListMemberActivitiesComponent
+    ListMemberActivitiesComponent,
+    ListMemberAbsencesComponent
   ],
   imports: [
     CommonModule,

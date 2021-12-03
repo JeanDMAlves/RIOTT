@@ -24,7 +24,9 @@ mat-drawer{
     height: 80%;
     overflow-y: auto;
     overflow-x: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 5px;
+    padding-right: 15px;
+    margin-right: 8px
 }
 
 mat-drawer-content{
@@ -50,16 +52,17 @@ mat-drawer-content{
     height: 60vh;
     overflow-y: auto;
     overflow-x: auto;
+    padding-right: 20px;
+    margin-bottom: 30px;
 }
 
 .lista-atividades-items::-webkit-scrollbar, .lista-membros::-webkit-scrollbar{
     border-radius: 90px;
-    width: 32px;
+    width: 8px;
+    background: var(--grayscale-2)
 }
 
 .lista-atividades-items::-webkit-scrollbar-thumb, .lista-membros::-webkit-scrollbar-thumb{
     background: var(--grayscale-3);
     border-radius: 90px;
-    border: 12px solid transparent;
-    background-clip: content-box;
 }
