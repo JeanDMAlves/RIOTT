@@ -1,79 +1,12 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    background: #ffffff;
-    height: 86px;
-    border-bottom: 1px solid var(--grayscale-2);
-}
-
-.logo-header{
-    color: var(--primary-dark);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 3.5px;
-    font-family: Roboto;
-    margin: 24px 0 24px 56px
-}
-
-.nav-header{
-    width: 376px;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    line-height: 19px;
-    margin-right: 56px;
+.mat-tab-link{
     padding: 0;
-    color: var(--grayscale-4);
+    opacity: 1;
+    height: 2rem;
+    min-width: 120px;
 }
 
-.nav-item{
-    margin-right: 16px;
-}
-
-.nav-item:target{
-    background: red;
-}
-
-.nav-item:last-child{
-    color:var(--secundary-dark)
-}
-
-/* estilo das labels */
-.mat-tab-label {
-    min-width: 25px !important;
-    padding: 5px;
-    background-color: transparent;
-    color: var(--grayscale-4);
-    font-weight: 700;
-    width: 100px;
-}
-.mat-tab-label:last-child {
-    min-width: 25px !important;
-    padding: 5px;
-    background-color: transparent;
-    color: var(--secundary-dark);
-    font-weight: 700;
-}
-
-/* estilo da label selecionada */
-.mat-tab-label.mat-tab-label-active {
-    min-width: 25px !important;
-    padding: 5px;
-    background-color: transparent;
-    color: var(--primary-dark);
-    font-weight: 700;
-}
-
-/* estilo da barra inferior */
-.mat-ink-bar {
-    padding: 1px;
-    border-radius: 3px;
-}
-/* cor da barra inferior */
-.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-    background: var(--secundary-dark);
+mat-ink-bar{
+    transition: none;
+    height: 4px;
+    background-color: var(--secundary-dark);
 }

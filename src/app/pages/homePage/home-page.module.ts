@@ -11,6 +11,7 @@ import { ListMemberItemComponent } from './lists/list-member-item/list-member-it
 import { ManageButtonComponent } from './lists/manage-button/manage-button.component';
 import { ListMemberActivitiesComponent } from './lists/list-member-activities/list-member-activities.component';
 import { ListMemberAbsencesComponent } from './lists/list-member-absences/list-member-absences.component';
+import { HomePageRoutingModule } from "./home-page-routing.module";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ListMemberAbsencesComponent } from './lists/list-member-absences/list-m
     CommonModule,
     MaterialExampleModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HomePageRoutingModule
   ]
 })
-export class LoggedModule { }
+export class HomePageModule { }
