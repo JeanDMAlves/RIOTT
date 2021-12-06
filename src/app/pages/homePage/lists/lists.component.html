@@ -3,9 +3,13 @@
     <mat-drawer mode="side" opened>
         <h2 class="titulo-lista-membros">Listas:</h2>
         <div class = "lista-membros">
-            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
-            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
-            <app-list-member-item allowance="960" discounts="500" name="Luisa Sousa"></app-list-member-item>
+            <app-list-member-item class="item-lista-membros" 
+            (click)="setSelected(member.id)" 
+            [class.selected]="member.id == selectedId" 
+            *ngFor="let member of members" 
+            [name]="member.name" 
+            [allowance]="member.allowance" 
+            [discounts]="member.discounts"></app-list-member-item>
         </div>
         <app-manage-button></app-manage-button>
     </mat-drawer>
@@ -14,14 +18,11 @@
         <div class="lista-atividades">
             <h3 class="lista-atividades-titulo">Lista:</h3>
             <div class="lista-atividades-items">
-                <app-list-member-activities activityValue=300 activityDescription="Tirar o lixo"></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
-                <app-list-member-activities></app-list-member-activities>
+                <app-list-member-activities 
+                *ngFor="let activity of membersActivities" 
+                [activityValue]="activity.activityValue"
+                [activityDescription]="activity.activityDescription"
+                ></app-list-member-activities>
             </div>
             <app-list-member-absences></app-list-member-absences>
         </div>

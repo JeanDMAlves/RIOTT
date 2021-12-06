@@ -5,7 +5,7 @@ mat-drawer-container{
 }
 
 mat-drawer{
-    width: 330px;
+    width: max-content;
 }
 
 .titulo-lista-membros{
@@ -65,4 +65,19 @@ mat-drawer-content{
 .lista-atividades-items::-webkit-scrollbar-thumb, .lista-membros::-webkit-scrollbar-thumb{
     background: var(--grayscale-3);
     border-radius: 90px;
+}
+
+
+.selected{
+    border: 1px solid #83C5BE;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 24px rgba(131, 197, 190, 0.3);
+    border-radius: 4px;
+    border-right: 15px solid var(--primary-light);
+    width: max-content;
+}
+
+.item-lista-membros{
+    margin-bottom: 10px;
+    height: 125px;
 }

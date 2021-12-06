@@ -40,9 +40,29 @@
 }
 
 .botao-marca-falta{
+    background: #ffffff;
+    border: 2px var(--secundary-dark) solid;
+    border-radius: 4px;
+    width: 109px;
+    height: 40px;
+    color: var(--secundary-dark);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0;
+}
+
+.botao-faltou{
     background: var(--secundary-dark);
     border-radius: 4px;
     width: 109px;
     height: 40px;
     color: #ffffff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
 }

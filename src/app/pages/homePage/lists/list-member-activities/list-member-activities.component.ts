@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 export class ListMemberActivitiesComponent{
   @Input() activityDescription:string = 'AAAAAAAA';
   @Input() activityValue:number = 0;
+  public activityDone = 0;
+  
+  public onclick(): void{
+    if(this.activityDone == 0){ this.activityDone = 1; } 
+    else{ this.activityDone = 0; }
+  }
 }
