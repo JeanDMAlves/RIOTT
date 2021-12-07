@@ -15,7 +15,7 @@ import { EditButtonComponent } from './components/edit-button/edit-button.compon
     ],
 	declarations: [
         RemoveButtonComponent,
-        EditButtonComponent
+        EditButtonComponent,
   ],
 	providers: [ ],
     exports: [  

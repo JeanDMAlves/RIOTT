@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LoginBoxComponent } from './login-box/login-box.component';
 import { MaterialExampleModule } from '../../../material.module';
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -16,7 +17,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     CommonModule,
     MaterialExampleModule,
     ReactiveFormsModule,
-    
+    HttpClientModule,
   ]
 })
 export class LoginModule { }
