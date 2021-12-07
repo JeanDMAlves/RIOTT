@@ -17,4 +17,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --support-red: #EB5757;
     --support-green: #27AE60;
     --support-blue: #2F80ED;
+
+    /* cor do outliner */
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: var(--grayscale-4);
+    }
+    /* cor quando focado */
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: var(--primary-dark);
+    }
+    /* Cor da caixa ao dar inserir campo invalido */
+    .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: var(--primary-dark);
+    }
 }
