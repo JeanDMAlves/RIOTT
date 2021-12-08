@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialExampleModule } from '../../../material.module';
+import { MaterialModule } from '../../../material.module';
 import { NavegationHeaderComponent } from './navegation-header/navegation-header.component';
 import { ListsComponent } from './lists/lists.component';
 import { ActivitiesComponent } from './activities/activities.component';
@@ -27,7 +27,7 @@ import { HomePageRoutingModule } from "./home-page-routing.module";
   ],
   imports: [
     CommonModule,
-    MaterialExampleModule,
+    MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
     HomePageRoutingModule
