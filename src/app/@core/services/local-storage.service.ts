@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
 	private storage: Storage;
 	private key: string = 'TokenLogin';
+	
 	constructor(){
 		this.storage = window.localStorage;
 	}
@@ -19,6 +20,12 @@ export class LocalStorageService {
 	public readToken(): string{
 		if(this.storage){
            return this.storage.getItem(this.key);
+        }
+	}
+
+	public deleteToken(): void{
+		if(this.storage){
+           return this.storage.removeItem(this.key);
         }
 	}
 }

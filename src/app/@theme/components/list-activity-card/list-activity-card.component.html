@@ -1,0 +1,12 @@
+<div>
+    <div *ngFor="let item of data">
+        <h4>{{item.title}}</h4>
+        <p>{{item.value}}</p>
+    </div>
+    <div *ngFor="let button of buttons">
+        <button class="{{button.class}}">
+            {{button.icon}}
+            {{button.label}}
+        </button>
+    </div>
+</div>
