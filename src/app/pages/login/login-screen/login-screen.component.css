@@ -1,26 +1,18 @@
-.cover {
-    width: 60%;
-    height: 100vh;
+.background-img {
+    width: 100;
+    margin-left: 0%;
 }
 
-.overimg {
+.text-img {
     position: absolute;
     width: 534px;
     height: 202px;
     left: 56px;
-    top: 330px;
+    top: 510px;
 
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 86px;
     line-height: 101px;
 
     color: #FFFFFF;
-}
-
-.loginBox{
-    position: absolute;
-    top: 100px;
-    left: 820px;
 }

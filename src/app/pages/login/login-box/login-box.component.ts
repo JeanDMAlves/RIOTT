@@ -16,17 +16,6 @@ export class LoginBoxComponent{
 
 	constructor(private login: AuthenticationService, private localStorage: LocalStorageService, private router: Router){}
 
-	public getErrorMessage(): string {
-		if (this.email.hasError('required')) {
-			return 'Você deve digitar seu email';
-		}
-		return this.email.hasError('email') ? 'Não é um email válido' : '';
-	}
-
-	private getClientData(): IClient{
-		return {email:this.email.value, password:this.password.value};
-	}
-
 	onSubmit(): void{
 		const client: IClient = this.getClientData();
 		this.login.validateLogin(client)
@@ -35,4 +24,38 @@ export class LoginBoxComponent{
 			this.router.navigate(['pages/home/']);
 		});
 	}
+
+  /**
+   * Checa as condições do campo e mostra uma mensagem ao usuário caso
+   * tenha inserido um email inválido ou tenha deixado o campo vazio.
+   * 
+   * @returns mensagem de alerta ou vazia
+   */
+  public getEmailErrorMessage(): string {
+    if (this.email.hasError('required')) {
+      return 'Este campo é obrigatório';
+    }
+    return this.email.hasError('email') ? 'Digite um email válido' : '';
+  }
+
+  /**
+   * Checa as condições do campo e mostra uma mensagem ao usuário caso
+   * tenha inserido uma senha muito curta ou tenha deixado o campo vazio.
+   * 
+   * @returns mensagem de alerta ou vazia
+   */
+  public getPasswordErrorMessage(): string {
+    if (this.password.hasError('required')) {
+      return 'Este campo é obrigatório';
+    }
+    return this.password.hasError('minlength') ? 'Senha muito curta' : '';
+  }
+
+  /**
+   * Recebe os valores de input do usuário e retorna uma interface
+   * do tipo ICliente armazenando os valores 
+   */
+  private getClientData(): IClient {
+    return {email: this.email.value, password: this.password.value};
+  }
 }

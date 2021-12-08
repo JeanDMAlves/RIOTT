@@ -1,6 +1,4 @@
 .logo {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 66px;
@@ -8,10 +6,8 @@
     color: var(--primary-dark);
 }
 
-.msg {
+.welcome-message {
     width: 282px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
@@ -19,9 +15,7 @@
     text-align: center;
 }
 
-.gbutton {
-    font-family: Roboto;
-    font-style: normal;
+.green-button {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -39,21 +33,6 @@
     background: var(--primary-dark);
 }
 
-/* cor do outliner */
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: var(--grayscale-4)!important;
-}
-
-/* cor quando focado */
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: var(--primary-dark)!important;
-}
-
-/* Cor da caixa ao dar inserir campo invalido */
-::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: var(--primary-dark)!important;
-}
-
 .email {
     width: 306px;
 }
@@ -63,6 +42,8 @@
 }
 
 .input {
+    top: 100px;
+    margin-left: 63%;
     display: flex;
     justify-content: center;
     flex-direction: column;

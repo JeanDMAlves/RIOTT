@@ -2,7 +2,7 @@ import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginBoxComponent } from './login-box/login-box.component';
-import { MaterialExampleModule } from '../../../material.module';
+import { MaterialModule } from '../../../material.module';
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    MaterialExampleModule,
+    MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
   ]
