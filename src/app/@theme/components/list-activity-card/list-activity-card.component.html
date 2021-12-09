@@ -3,8 +3,8 @@
         <h4>{{item.title}}</h4>
         <p>{{item.value}}</p>
     </div>
-    <div *ngFor="let button of buttons">
-        <button class="{{button.class}}">
+    <div *ngIf="buttons.length > 0" >
+        <button *ngFor="let button of buttons" class="{{button.class}}">
             {{button.icon}}
             {{button.label}}
         </button>

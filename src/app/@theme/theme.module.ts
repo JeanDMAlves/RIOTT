@@ -13,11 +13,11 @@ import { ListActivityCardComponent } from './components/list-activity-card/list-
         HttpClientModule
     ],
 	declarations: [
-  
-    ListActivityCardComponent
-  ],
+        ListActivityCardComponent
+    ],
 	providers: [ ],
     exports: [  
+        ListActivityCardComponent
     ]
 })
 export class ThemeModule { }

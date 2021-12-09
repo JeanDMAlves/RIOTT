@@ -10,15 +10,15 @@ export class ListActivityCardComponent{
 	@Input() buttons: Ibutton[]; 
 }
 
-interface Idata{
-	key: string,
+export interface Idata{
+	key?: string,
 	title: string,
 	value: string
 }
 
-interface Ibutton{
+export interface Ibutton{
 	label: string,
-	class: string,
+	class?: string,
 	icon?: string,
-	action: string
+	action?: string
 }

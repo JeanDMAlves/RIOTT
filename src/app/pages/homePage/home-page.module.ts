@@ -30,7 +30,7 @@ import { HomePageRoutingModule } from "./home-page-routing.module";
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ]
 })
 export class HomePageModule { }
