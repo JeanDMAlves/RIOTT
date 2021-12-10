@@ -12,9 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
         HttpClientModule
     ],
 	declarations: [
-  ],
-	providers: [ ],
-    exports: [  
-    ]
+    ],
+
 })
 export class ThemeModule { }

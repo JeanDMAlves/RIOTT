@@ -5,6 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 :root{
     font-family: Roboto;
     font-style: normal;
+    --white: #ffffff;
     --primary-dark: #006D77;
     --primary-light: #83C5BE;
     --secundary-dark: #E29578;
@@ -30,4 +31,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .mat-form-field.mat-form-field-invalid .mat-form-field-label {
         color: var(--primary-dark);
     }
+}
+
+.background-img {
+    width: 845px;
+    height: 768px;
+    margin-left: 0%;
+    object-fit: contain;
+}
+
+.text-img {
+    position: absolute;
+
+    left: 56px;
+    bottom: 56px;
+
+    font-weight: bold;
+    font-size: 86px;
+    line-height: 101px;
+
+    color: #FFFFFF;
 }

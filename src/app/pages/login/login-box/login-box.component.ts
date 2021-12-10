@@ -16,6 +16,12 @@ export class LoginBoxComponent{
 
 	constructor(private login: AuthenticationService, private localStorage: LocalStorageService, private router: Router){}
 
+  /**
+   * Pega os dados do formulário (email e senha),
+   * Verifica se o usuário já está cadastrado no sistema,
+   * Se o usuário estiver cadastrado adiciona o Token de Login
+   * no LocalStorage e redireciona para a página Home 
+   */
 	onSubmit(): void{
 		const client: IClient = this.getClientData();
 		this.login.validateLogin(client)

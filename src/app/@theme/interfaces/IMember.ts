@@ -1,4 +1,4 @@
-export interface IClientChildren {
+export interface IMember {
     id:number,
     name:string,
     chores:string[],
