@@ -80,7 +80,7 @@
 }
 
 .lista-atividades-pagamento-descontos p{
-    color:#EB5757;
+    color:var(--support-red);
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

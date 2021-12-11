@@ -33,6 +33,6 @@ import { ThemeModule } from "src/app/@theme/theme.module";
     HttpClientModule,
     HomePageRoutingModule,
     ThemeModule
-  ]
+  ],
 })
 export class HomePageModule { }

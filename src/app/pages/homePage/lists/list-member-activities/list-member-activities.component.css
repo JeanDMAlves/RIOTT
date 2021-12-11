@@ -39,7 +39,7 @@
     word-break: break-all;
 }
 
-.botao-marca-falta{
+.orange-check-button{
     background: var(--white);
     border: 2px var(--secondary-dark) solid;
     border-radius: 4px;
@@ -54,7 +54,7 @@
     padding: 0;
 }
 
-.botao-faltou{
+.solid-orange-button{
     background: var(--secondary-dark);
     border-radius: 4px;
     width: 109px;

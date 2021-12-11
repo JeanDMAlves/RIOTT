@@ -76,6 +76,6 @@ mat-card-subtitle{
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: #EB5757;
+    color: var(--support-red);
 }
 

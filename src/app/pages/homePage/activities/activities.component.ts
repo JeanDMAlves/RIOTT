@@ -7,6 +7,8 @@ import { Idata, Ibutton } from 'src/app/@theme/components/list-activity-card/lis
 	styleUrls: ['./activities.component.css']
 })
 export class ActivitiesComponent {
+	tittle:string = 'Atividades';
+	button: string= 'Cadastrar nova atividade';
 	// constructor(private activities: ActivityService){}
 	// ngOnInit(): void {
 	// 	this.activities.getActivities(1, 10, 1, 'ASC')
@@ -25,11 +27,11 @@ export class ActivitiesComponent {
 	buttonTeste: Ibutton[] = [
 		{
 			label: 'Excluir',
-			class: 'button-delete',
+			class: 'orange-button',
 		},
 		{
 			label: 'Editar',
-			class: 'button-update',
+			class: 'light-green-button',
 		},
 	]
 }
