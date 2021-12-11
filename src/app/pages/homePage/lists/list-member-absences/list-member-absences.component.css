@@ -17,7 +17,7 @@
     width: 150px;
     height: 42px;
     align-items:center;
-    border-right: 1px solid #DEE8EB;
+    border-right: 1px solid var(--grayscale-2);
 }
 
 .lista-atividades-faltas h4{
@@ -92,7 +92,7 @@
 .lista-atividades-finalizar{
     width: 116px;
     height: 40px;
-    color: #ffffff;
+    color: var(--white);
     background: var(--primary-dark);
     font-family: Roboto;
     font-style: normal;
