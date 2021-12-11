@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { IActivities, IActivity } from './../../@theme/interfaces/iactivities';
+import { IActivities, IActivity } from '../../@theme/interfaces/IActivities';
 import { LocalStorageService } from './local-storage.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -14,12 +14,14 @@ export class ActivityService {
 	
 	private httpOptions = {
 		headers: new HttpHeaders({
-			'Content-Type': 'application/json',
+			'Content-Type' : 'application/json',    
 			'Authorization': `Bearer ${this.token}`
 		})
 	}
 
 	public getActivities(page:number, size:number, order:number, orderBy:string = 'ASC'): Observable<IActivities>{
+		console.log(this.token);
+		console.log(typeof(this.token));
 		return this.http.get<IActivities>(
 			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`,
 			this.httpOptions);

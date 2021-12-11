@@ -7,9 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ListMemberActivitiesComponent{
   @Input() activityDescription:string = 'AAAAAAAA';
-  @Input() activityValue:number = 0;
+  @Input() activityValue: number = 0;
   public activityDone = 0;
-  
+  /**
+   * Inverte o estilo do botão a partir do clique
+   */
   public onclick(): void{
     if(this.activityDone == 0){ this.activityDone = 1; } 
     else{ this.activityDone = 0; }

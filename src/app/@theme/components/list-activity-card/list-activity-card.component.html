@@ -1,4 +1,7 @@
 <div class="listBox">
+    <div *ngIf = "image">
+        <img src="/"alt="uma imagem"/>
+    </div>
     <div *ngFor="let item of data" class="">
         <h4 class="listBox-data-title">{{item.title}}</h4>
         <p class="listBox-data-value">{{item.value}}</p>
