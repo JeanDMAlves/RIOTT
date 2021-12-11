@@ -12,6 +12,7 @@ import { ManageButtonComponent } from './lists/manage-button/manage-button.compo
 import { ListMemberActivitiesComponent } from './lists/list-member-activities/list-member-activities.component';
 import { ListMemberAbsencesComponent } from './lists/list-member-absences/list-member-absences.component';
 import { HomePageRoutingModule } from "./home-page-routing.module";
+import { ThemeModule } from "src/app/@theme/theme.module";
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HomePageRoutingModule } from "./home-page-routing.module";
     ReactiveFormsModule,
     HttpClientModule,
     HomePageRoutingModule,
+    ThemeModule
   ]
 })
 export class HomePageModule { }
