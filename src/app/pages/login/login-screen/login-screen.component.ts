@@ -10,6 +10,10 @@ import { Router } from '@angular/router';
 export class LoginScreenComponent implements OnInit{
   constructor(private localStorage: LocalStorageService, private router: Router){}
   
+  /**
+   * Verifica se o Token de Login existe no LocalStorage
+   * Se existir, redireciona para a página Home
+   */
   ngOnInit(): void {
     if(this.localStorage.readToken()){
       this.router.navigate(['pages/home/']);

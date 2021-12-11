@@ -1,6 +1,6 @@
 import { LocalStorageService } from './../../../@core/services/local-storage.service';
 import { AuthenticationService } from './../../../@core/services/authentication.service';
-import { IClient } from '../../../@theme/interfaces/Iclient';
+import { IClient } from '../../../@theme/interfaces/IClient';
 import { Component } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -22,7 +22,7 @@ export class LoginBoxComponent{
    * Se o usuário estiver cadastrado adiciona o Token de Login
    * no LocalStorage e redireciona para a página Home 
    */
-	onSubmit(): void{
+	public onSubmit(): void{
 		const client: IClient = this.getClientData();
 		this.login.validateLogin(client)
 		.subscribe((dados) => {
