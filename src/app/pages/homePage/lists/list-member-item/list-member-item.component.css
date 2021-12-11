@@ -12,7 +12,7 @@
 .selected{
     border: 1px solid var(--primary-light);
     box-sizing: border-box;
-    box-shadow: 0px 4px 24px rgba(131, 197, 190, 0.3);
+    box-shadow: 0px 4px 24px var(--primary-light);
     border-radius: 4px;
     border-right: 15px solid var(--primary-light);
 }
