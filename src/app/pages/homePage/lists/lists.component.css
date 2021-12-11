@@ -56,18 +56,6 @@ mat-drawer-content{
     margin-bottom: 30px;
 }
 
-.lista-atividades-items::-webkit-scrollbar, .lista-membros::-webkit-scrollbar{
-    border-radius: 90px;
-    width: 8px;
-    background: var(--grayscale-2)
-}
-
-.lista-atividades-items::-webkit-scrollbar-thumb, .lista-membros::-webkit-scrollbar-thumb{
-    background: var(--grayscale-3);
-    border-radius: 90px;
-}
-
-
 .selected{
     border: 1px solid var(--primary-light);
     box-sizing: border-box;

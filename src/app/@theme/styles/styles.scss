@@ -31,4 +31,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .mat-form-field.mat-form-field-invalid .mat-form-field-label {
         color: var(--primary-dark);
     }
+
+    ::-webkit-scrollbar{
+        border-radius: 90px;
+        width: 8px;
+        background: var(--grayscale-2)
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background: var(--grayscale-3);
+        border-radius: 90px;
+    }
 }
