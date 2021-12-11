@@ -3,12 +3,13 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-	private url: string = 'http://34.136.200.153:4444'
+	private url: string = environment.apiURL
 
 	constructor(private http: HttpClient){}
 
