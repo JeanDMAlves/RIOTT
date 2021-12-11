@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from '@angular/common/http';
 import { ListActivityCardComponent } from "./components/list-activity-card/list-activity-card.component";
+import { HeaderBoxComponent } from "./components/headerBox/header-box.component";
 
 @NgModule({
     imports: [
@@ -13,11 +14,13 @@ import { ListActivityCardComponent } from "./components/list-activity-card/list-
         HttpClientModule
     ],
 	declarations: [
-        ListActivityCardComponent
+        ListActivityCardComponent,
+        HeaderBoxComponent
     ],
 	providers: [ ],
     exports: [  
-        ListActivityCardComponent
+        ListActivityCardComponent,
+        HeaderBoxComponent
     ]
 })
 export class ThemeModule { }

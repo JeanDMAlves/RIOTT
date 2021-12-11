@@ -3,34 +3,6 @@
     margin: 1.5rem auto 0 auto;
 }
 
-.atividades-header{
-    display: flex ;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 1.5rem;
-}
-.atividades-titulo{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    color: var(--greyscale-5);
-    margin:0;
-}
-
-.atividades-cadastrar{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--white);
-    background: var(--primary-dark);
-    width: 188px;
-    height: 40px;
-}
-
 .lista-atividades{
     overflow-y: scroll;
     padding-right:1.5rem;
