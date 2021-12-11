@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ListActivityCardComponent{
 	@Input() data: Idata[]; 
 	@Input() buttons: Ibutton[]; 
-
 }
 
 export interface Idata{

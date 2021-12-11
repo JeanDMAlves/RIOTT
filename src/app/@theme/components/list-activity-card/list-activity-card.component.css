@@ -1,0 +1,61 @@
+.listBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 22px 32px;
+    border: 1px solid #DEE8EB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.listBox-data-title{
+    color:var(--grayscale-4);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    margin-bottom: 8px; 
+}
+
+.listBox-data-value{
+    color:var(--grayscale-5);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0;
+}
+
+.button-delete{
+    background: var(--white);
+    border: 2px var(--secondary-dark) solid;
+    border-radius: 4px;
+    width: 75px;
+    height: 40px;
+    color: var(--secondary-dark);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right:16px
+}
+
+.button-update{
+    background: var(--primary-light);
+    border: 2px var(--primary-light) solid;
+    border-radius: 4px;
+    width: 69px;
+    height: 40px;
+    color: var(--white);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
