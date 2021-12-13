@@ -8,7 +8,7 @@
     padding: 16px;
     border: 1px solid var(--primary-light);
     box-sizing: border-box;
-    box-shadow: 7px 7px 14px rgba(181, 197, 202, 0.5);
+    box-shadow: 7px 7px 14px var(--primary-light);
     border-radius: 4px;
 }
 
@@ -17,7 +17,7 @@
     width: 150px;
     height: 42px;
     align-items:center;
-    border-right: 1px solid #DEE8EB;
+    border-right: 1px solid var(--grayscale-2);
 }
 
 .lista-atividades-faltas h4{
@@ -80,7 +80,7 @@
 }
 
 .lista-atividades-pagamento-descontos p{
-    color:#EB5757;
+    color:var(--support-red);
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -92,7 +92,7 @@
 .lista-atividades-finalizar{
     width: 116px;
     height: 40px;
-    color: #ffffff;
+    color: var(--white);
     background: var(--primary-dark);
     font-family: Roboto;
     font-style: normal;

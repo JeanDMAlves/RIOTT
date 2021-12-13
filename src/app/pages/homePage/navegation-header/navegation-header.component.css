@@ -8,7 +8,7 @@
 
 /* estilo da label Sair */
 .mat-tab-labels, .mat-tab-link:last-child {
-    color: var(--secundary-dark);
+    color: var(--secondary-dark);
 }
 
 /* estilo da label selecionada */
@@ -24,5 +24,5 @@
 }
 /* cor da barra inferior */
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background: var(--secundary-dark);
+    background: var(--secondary-dark);
 }

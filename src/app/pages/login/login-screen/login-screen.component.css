@@ -15,5 +15,5 @@
     font-size: 86px;
     line-height: 101px;
 
-    color: #FFFFFF;
+    color: var(--white);
 }

@@ -39,13 +39,13 @@
     word-break: break-all;
 }
 
-.botao-marca-falta{
-    background: #ffffff;
-    border: 2px var(--secundary-dark) solid;
+.orange-check-button{
+    background: var(--white);
+    border: 2px var(--secondary-dark) solid;
     border-radius: 4px;
     width: 109px;
     height: 40px;
-    color: var(--secundary-dark);
+    color: var(--secondary-dark);
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -54,12 +54,12 @@
     padding: 0;
 }
 
-.botao-faltou{
-    background: var(--secundary-dark);
+.solid-orange-button{
+    background: var(--secondary-dark);
     border-radius: 4px;
     width: 109px;
     height: 40px;
-    color: #ffffff;
+    color: var(--white);
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;

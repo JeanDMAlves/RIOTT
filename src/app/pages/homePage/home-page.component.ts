@@ -9,23 +9,23 @@ export class HomePageComponent{
   public homeTabs = [
     {
         label: "Listas",
-        link: "first",
+        link: "Listas",
     },
     {
         label: "Histórico",
-        link: "second",
+        link: "Histórico",
     },
     {
         label: "Atividades",
-        link: "first",
+        link: "Atividades",
     },
     {
         label: "Membros",
-        link: "second",
+        link: "Membros",
     },
     {
         label: "Sair",
-        link:"first"
+        link:"Sair"
     }
 ];
 }

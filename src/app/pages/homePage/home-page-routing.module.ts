@@ -9,8 +9,8 @@ const homeRoutes: Routes = [
         path: '',
         component: HomePageComponent,
         children: [
-            { path: 'first', component: ListsComponent },
-            { path: 'second', component: ActivitiesComponent },
+            { path: 'Listas', component: ListsComponent },
+            { path: 'Atividades', component: ActivitiesComponent },
         ]
     }
 ];

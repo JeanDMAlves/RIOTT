@@ -30,7 +30,7 @@ mat-drawer{
 }
 
 mat-drawer-content{
-    background: #ffffff;
+    background: var(--white);
 }
 
 .lista-atividades{
@@ -56,22 +56,10 @@ mat-drawer-content{
     margin-bottom: 30px;
 }
 
-.lista-atividades-items::-webkit-scrollbar, .lista-membros::-webkit-scrollbar{
-    border-radius: 90px;
-    width: 8px;
-    background: var(--grayscale-2)
-}
-
-.lista-atividades-items::-webkit-scrollbar-thumb, .lista-membros::-webkit-scrollbar-thumb{
-    background: var(--grayscale-3);
-    border-radius: 90px;
-}
-
-
 .selected{
-    border: 1px solid #83C5BE;
+    border: 1px solid var(--primary-light);
     box-sizing: border-box;
-    box-shadow: 0px 4px 24px rgba(131, 197, 190, 0.3);
+    box-shadow: 0px 4px 24px var(--primary-light);
     border-radius: 4px;
     border-right: 15px solid var(--primary-light);
     width: max-content;
