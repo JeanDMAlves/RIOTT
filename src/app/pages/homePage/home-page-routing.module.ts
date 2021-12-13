@@ -1,3 +1,4 @@
+import { MembersComponent } from './members/members.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ActivitiesComponent } from "./activities/activities.component";
@@ -11,6 +12,7 @@ const homeRoutes: Routes = [
         children: [
             { path: 'Listas', component: ListsComponent },
             { path: 'Atividades', component: ActivitiesComponent },
+            { path: 'Membros', component: MembersComponent },
         ]
     }
 ];

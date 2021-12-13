@@ -1,6 +1,6 @@
 import { LocalStorageService } from './../../../@core/services/local-storage.service';
 import { AuthenticationService } from './../../../@core/services/authentication.service';
-import { IClient } from '../../../@theme/interfaces/Iclient';
+import { IClient } from '../../../@theme/interfaces/IClient';
 import { Component } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';

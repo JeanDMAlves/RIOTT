@@ -1,4 +1,4 @@
-import { IUser } from './../../@theme/interfaces/iuser';
+import { IUser } from '../../@theme/interfaces/IUser';
 import { LocalStorageService } from './local-storage.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';

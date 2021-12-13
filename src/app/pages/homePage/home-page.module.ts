@@ -13,6 +13,7 @@ import { ListMemberActivitiesComponent } from './lists/list-member-activities/li
 import { ListMemberAbsencesComponent } from './lists/list-member-absences/list-member-absences.component';
 import { HomePageRoutingModule } from "./home-page-routing.module";
 import { ThemeModule } from "src/app/@theme/theme.module";
+import { MembersComponent } from './members/members.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ThemeModule } from "src/app/@theme/theme.module";
     ListMemberItemComponent,
     ManageButtonComponent,
     ListMemberActivitiesComponent,
-    ListMemberAbsencesComponent
+    ListMemberAbsencesComponent,
+    MembersComponent
   ],
   imports: [
     CommonModule,
