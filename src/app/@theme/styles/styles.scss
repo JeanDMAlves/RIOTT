@@ -86,9 +86,10 @@ body {
         background: var(--white);
         border: var(--secondary-dark);
 
-        width: auto;
-        min-width: 75px;
-        max-width: 115px;
-        margin-right: 16px;
+        // TODO - extender essa classe em atividades subscrevendo os valores por esses abaixo
+        // width: auto;
+        // min-width: 75px;
+        // max-width: 115px;
+        // margin-right: 16px;
     }
 }

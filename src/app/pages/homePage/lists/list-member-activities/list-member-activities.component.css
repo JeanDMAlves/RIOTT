@@ -39,13 +39,8 @@
     word-break: break-all;
 }
 
-.orange-check-button {
-    color: var(--secondary-dark);
-    background: var(--white);
-    border: var(--secondary-dark);
-
+.orange-button {
     width: 109px;
-    padding: 0;
 }
 
 .solid-orange-button {
