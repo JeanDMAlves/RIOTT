@@ -1,23 +1,28 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-:root{
+:root {
     font-family: Roboto;
     font-style: normal;
-    --primary-dark: #006D77;
-    --primary-light: #83C5BE;
-    --secondary-dark: #E29578;
-    --secondary-light: #FFDDD2;
-    --grayscale-1: #EDF6F9;
-    --grayscale-2: #DEE8EB;
-    --grayscale-3: #B5C5CA;
-    --grayscale-4: #7C8D93;
-    --grayscale-5: #3B4244;
-    --support-red: #EB5757;
-    --support-green: #27AE60;
-    --support-blue: #2F80ED;
-    --white: #FFFFFF;
+    --primary-dark: #006d77;
+    --primary-light: #83c5be;
+    --secondary-dark: #e29578;
+    --secondary-light: #3f3f3f;
+    --grayscale-1: #edf6f9;
+    --grayscale-2: #dee8eb;
+    --grayscale-3: #b5c5ca;
+    --grayscale-4: #7c8d93;
+    --grayscale-5: #3b4244;
+    --support-red: #eb5757;
+    --support-green: #27ae60;
+    --support-blue: #2f80ed;
+    --white: #ffffff;
 
     /* cor do outliner */
     .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -35,19 +40,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     ::-webkit-scrollbar {
         border-radius: 90px;
         width: 8px;
-        background: var(--grayscale-2)
+        background: var(--grayscale-2);
     }
-    
+
     ::-webkit-scrollbar-thumb {
         background: var(--grayscale-3);
         border-radius: 90px;
     }
 
     button:hover {
-        cursor:pointer
+        cursor: pointer;
     }
 
-    .dark-green-button{
+    .dark-green-button {
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
@@ -58,8 +63,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         width: 188px;
         height: 40px;
     }
-    
-    .light-green-button{
+
+    .light-green-button {
         background: var(--primary-light);
         border: 2px var(--primary-light) solid;
         border-radius: 4px;
@@ -72,8 +77,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         font-size: 14px;
         line-height: 16px;
     }
-    
-    .orange-button{
+
+    .orange-button {
         background: var(--white);
         border: 2px var(--secondary-dark) solid;
         border-radius: 4px;
@@ -87,6 +92,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        margin-right:16px
+        margin-right: 16px;
     }
 }

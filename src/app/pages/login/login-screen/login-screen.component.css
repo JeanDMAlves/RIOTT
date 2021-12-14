@@ -1,12 +1,25 @@
-.background-img {
-    width: 845px;
-    height: 768px;
-    margin-left: 0%;
-    object-fit: contain;
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: minmax(min-content, 845px) auto;
+    grid-template-areas: "img box";
 }
 
-.text-img {
-    position: absolute;
+.background-img {
+    grid-area: img;
+    height: 100vh;
+    width: 100%;
+}
+
+app-login-box {
+    grid-area: box;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.image-message {
+    position: fixed;
 
     left: 56px;
     bottom: 56px;
