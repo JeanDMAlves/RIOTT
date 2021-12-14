@@ -1,14 +1,14 @@
-mat-drawer-container{
+mat-drawer-container {
     height: 85vh;
     width: 90%;
     margin: 1.5rem auto 0 auto;
 }
 
-mat-drawer{
+mat-drawer {
     width: max-content;
 }
 
-.titulo-lista-membros{
+.titulo-lista-membros {
     color: var(--grayscale-5);
     font-family: Roboto;
     font-style: normal;
@@ -18,7 +18,7 @@ mat-drawer{
     text-align: left;
 }
 
-.lista-membros{
+.lista-membros {
     display: flex;
     flex-direction: column;
     height: 80%;
@@ -26,29 +26,26 @@ mat-drawer{
     overflow-x: auto;
     margin-bottom: 5px;
     padding-right: 15px;
-    margin-right: 8px
+    margin-right: 8px;
 }
 
-mat-drawer-content{
+mat-drawer-content {
     background: var(--white);
 }
 
-.lista-atividades{
+.lista-atividades {
     width: 95%;
     height: 74px;
     margin: 0 auto;
 }
 
-.lista-atividades-titulo{
+.lista-atividades-titulo {
     color: var(--grayscale-5);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
 }
 
-.lista-atividades-items{
+.lista-atividades-items {
     height: 60vh;
     overflow-y: auto;
     overflow-x: auto;
@@ -56,7 +53,7 @@ mat-drawer-content{
     margin-bottom: 30px;
 }
 
-.selected{
+.selected {
     border: 1px solid var(--primary-light);
     box-sizing: border-box;
     box-shadow: 0px 4px 24px var(--primary-light);
@@ -65,7 +62,7 @@ mat-drawer-content{
     width: max-content;
 }
 
-.item-lista-membros{
+.item-lista-membros {
     margin-bottom: 10px;
     height: 125px;
 }

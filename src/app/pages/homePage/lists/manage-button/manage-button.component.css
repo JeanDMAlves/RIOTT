@@ -1,4 +1,6 @@
 .light-green-button {
-    width: 272px;
-    align-self: flex-end;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

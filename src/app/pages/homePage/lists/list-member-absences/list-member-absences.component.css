@@ -22,9 +22,6 @@
 
 .lista-atividades-faltas h4 {
     margin: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 19px;
     color: var(--grayscale-4);
@@ -34,8 +31,6 @@
     color: var(--grayscale-5);
     margin: 0;
     margin-left: 8px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
@@ -51,8 +46,6 @@
 
 .lista-atividades-pagamento p {
     color: var(--grayscale-5);
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
@@ -63,9 +56,6 @@
 .lista-atividades-pagamento-descontos h5,
 .lista-atividades-pagamento-total h5 {
     color: var(--grayscale-4);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 8px;
@@ -74,9 +64,6 @@
 .lista-atividades-pagamento-mesada p,
 .lista-atividades-pagamento-total p {
     color: var(--grayscale-5);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     margin: 0;
@@ -84,9 +71,6 @@
 
 .lista-atividades-pagamento-descontos p {
     color: var(--support-red);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     margin: 0;
