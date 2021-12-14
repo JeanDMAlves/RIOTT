@@ -8,10 +8,7 @@ import { Router } from "@angular/router";
     styleUrls: ["./login-screen.component.css"],
 })
 export class LoginScreenComponent implements OnInit {
-    constructor(
-        private localStorage: LocalStorageService,
-        private router: Router
-    ) {}
+    constructor(private localStorage: LocalStorageService, private router: Router) {}
 
     /**
      * Verifica se o Token de Login existe no LocalStorage

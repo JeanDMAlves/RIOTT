@@ -11,10 +11,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
-    declarations: [
-        LoginScreenComponent, 
-        LoginBoxComponent
-    ],
+    declarations: [LoginScreenComponent, LoginBoxComponent],
     imports: [
         CommonModule,
         ReactiveFormsModule,

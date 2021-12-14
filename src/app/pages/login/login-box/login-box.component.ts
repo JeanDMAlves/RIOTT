@@ -11,17 +11,10 @@ import { Router } from "@angular/router";
 })
 export class LoginBoxComponent {
     public hide: boolean = true;
-    public email: FormControl = new FormControl("", [
-        Validators.required,
-        Validators.email,
-    ]);
+    public email: FormControl = new FormControl("", [Validators.required, Validators.email]);
     public password: FormControl = new FormControl("");
 
-    constructor(
-        private login: AuthenticationService,
-        private localStorage: LocalStorageService,
-        private router: Router
-    ) {}
+    constructor(private login: AuthenticationService, private localStorage: LocalStorageService, private router: Router) {}
 
     /**
      * Pega os dados do formulário (email e senha),
@@ -68,9 +61,9 @@ export class LoginBoxComponent {
      * do tipo ICliente armazenando os valores
      */
     private getClientData(): IClient {
-        return { 
-            email: this.email.value, 
-            password: this.password.value 
+        return {
+            email: this.email.value,
+            password: this.password.value,
         };
     }
 }

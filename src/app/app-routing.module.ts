@@ -5,8 +5,7 @@ import { LoginScreenComponent } from "./pages/login/login-screen/login-screen.co
 const routes: Routes = [
     {
         path: "pages",
-        loadChildren: (): Promise<NgModuleFactory<any> | Type<any> | any> =>
-            import("./pages/pages.module").then((module) => module.PagesModule),
+        loadChildren: (): Promise<NgModuleFactory<any> | Type<any> | any> => import("./pages/pages.module").then((module) => module.PagesModule),
     },
     {
         path: "login",
