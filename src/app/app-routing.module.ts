@@ -9,7 +9,7 @@ const routes: Routes = [
             import("./pages/pages.module").then((module) => module.PagesModule),
     },
     {
-        path: 'login',
+        path: "login",
         component: LoginScreenComponent,
     },
     { path: "**", redirectTo: "login" },

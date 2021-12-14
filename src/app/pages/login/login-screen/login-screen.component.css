@@ -1,14 +1,14 @@
 .grid {
     display: grid;
     height: 100vh;
-    grid-template-columns: 62vw auto;
+    grid-template-columns: minmax(min-content, 845px) auto;
     grid-template-areas: "img box";
 }
 
 .background-img {
     grid-area: img;
     height: 100vh;
-    max-width: 100%;
+    width: 100%
 }
 
 app-login-box {
@@ -18,8 +18,8 @@ app-login-box {
     align-items: center;
 }
 
-.text-img {
-    position: absolute;
+.image-message {
+    position: fixed;
 
     left: 56px;
     bottom: 56px;
@@ -27,6 +27,6 @@ app-login-box {
     font-weight: bold;
     font-size: 86px;
     line-height: 101px;
-    
+
     color: var(--white);
 }
