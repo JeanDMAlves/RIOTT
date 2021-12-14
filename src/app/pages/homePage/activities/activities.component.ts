@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivityService } from 'src/app/@core/services/activity.service';
 import { Idata, Ibutton } from 'src/app/@theme/components/list-activity-card/list-activity-card.component';
 //import { ActivityService } from 'src/app/@core/services/activity.service';
 @Component({
@@ -7,6 +8,7 @@ import { Idata, Ibutton } from 'src/app/@theme/components/list-activity-card/lis
 	styleUrls: ['./activities.component.css']
 })
 export class ActivitiesComponent {
+	constructor(private teste: ActivityService){}
 	tittle:string = 'Atividades';
 	button: string= 'Cadastrar nova atividade';
 	// constructor(private activities: ActivityService){}
@@ -34,4 +36,11 @@ export class ActivitiesComponent {
 			class: 'light-green-button',
 		},
 	]
+
+	public ngOnInit(): void {
+		this.teste.getActivities(1, 10, 1)
+		.subscribe((dados) => {
+			console.log(dados);
+		});
+	}
 }

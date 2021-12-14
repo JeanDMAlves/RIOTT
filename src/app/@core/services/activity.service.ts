@@ -23,7 +23,7 @@ export class ActivityService {
 		console.log(this.token);
 		console.log(typeof(this.token));
 		return this.http.get<IActivities>(
-			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`,
+			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy=${orderBy}`,
 			this.httpOptions);
 	}
 
