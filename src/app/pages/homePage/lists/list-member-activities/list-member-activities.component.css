@@ -1,4 +1,4 @@
-.lista-atividades-item{
+.lista-atividades-item {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -11,12 +11,12 @@
     align-content: center;
 }
 
-.descricao-item{
+.descricao-item {
     width: 600px;
     max-width: 100%;
 }
 
-.header-item{
+.header-item {
     color: var(--grayscale-4);
     font-family: Roboto;
     font-style: normal;
@@ -27,42 +27,31 @@
     max-width: 100%;
 }
 
-.content-item{
+.content-item {
     color: var(--grayscale-5);
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    margin:0;
+    margin: 0;
     max-width: 600px;
     word-break: break-all;
 }
 
-.orange-check-button{
-    background: var(--white);
-    border: 2px var(--secondary-dark) solid;
-    border-radius: 4px;
-    width: 109px;
-    height: 40px;
+.orange-check-button {
     color: var(--secondary-dark);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    background: var(--white);
+    border: var(--secondary-dark);
+
+    width: 109px;
     padding: 0;
 }
 
-.solid-orange-button{
-    background: var(--secondary-dark);
-    border-radius: 4px;
-    width: 109px;
-    height: 40px;
+.solid-orange-button {
     color: var(--white);
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    background: var(--secondary-dark);
+    border: var(--secondary-dark);
+
+    width: 109px;
 }

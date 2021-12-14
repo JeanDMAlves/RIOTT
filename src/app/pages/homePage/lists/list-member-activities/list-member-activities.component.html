@@ -8,13 +8,13 @@
         <p class="content-item">R$ {{activityValue}}</p>
     </div>
     <div >
-        <button mat-button class="solid-orange-button" (click)="onclick()" *ngIf="activityDone==1">
+        <button mat-button class="solid-orange-button" id="button" (click)="onclick()" *ngIf="activityDone==1">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.5359 11.5351L4.46532 4.46457M4.46532 11.5351L11.5359 4.46457" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Faltou
         </button>
-        <button mat-button class="orange-check-button" (click)="onclick()" *ngIf="activityDone==0">
+        <button mat-button class="orange-check-button" id="button" (click)="onclick()" *ngIf="activityDone==0">
             Marcar Falta
         </button>
     </div>

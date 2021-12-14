@@ -1,6 +1,4 @@
-.botao-gerenciar{
-    background: var(--primary-light);
-    color: var(--white);
-    width: 302px;
+.light-green-button {
+    width: 272px;
     align-self: flex-end;
 }
