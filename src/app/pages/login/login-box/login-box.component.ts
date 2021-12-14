@@ -26,7 +26,7 @@ export class LoginBoxComponent {
         const client: IClient = this.getClientData();
         this.login.validateLogin(client).subscribe((data) => {
             this.localStorage.createToken(data["data"]);
-            this.router.navigate(["pages/home/"]);
+            this.router.navigate(["Home/"]);
         });
     }
 
