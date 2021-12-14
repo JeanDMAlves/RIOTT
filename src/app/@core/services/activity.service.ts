@@ -11,10 +11,10 @@ export class ActivityService {
 	private url: string = 'http://34.136.200.153:4444/task'
 	private token: string = this.localStorage.readToken()
 	constructor(private http: HttpClient, private localStorage: LocalStorageService){ }
-	
+
 	private httpOptions = {
 		headers: new HttpHeaders({
-			'Content-Type' : 'application/json',    
+			'Content-Type' : 'application/json',
 			'Authorization': `Bearer ${this.token}`
 		})
 	}
@@ -23,7 +23,7 @@ export class ActivityService {
 		console.log(this.token);
 		console.log(typeof(this.token));
 		return this.http.get<IActivities>(
-			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`,
+			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy=${orderBy}`,
 			this.httpOptions);
 	}
 

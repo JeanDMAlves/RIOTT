@@ -11,7 +11,7 @@ export class UserService {
 	private url: string = 'http://34.136.200.153:4444/user'
 	private token: string = this.localStorage.readToken()
 	constructor(private http: HttpClient, private localStorage: LocalStorageService){ }
-	
+
 	private httpOptions = {
 		headers: new HttpHeaders({
 			'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ export class UserService {
 
 	public getUsers(page:number, size:number, order:number, orderBy:string = 'ASC'): Observable<IUser>{
 		return this.http.get<IUser>(
-			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`,
+			`${this.url}?page=${page}&size=${size}&order=${order}&orderBy=${orderBy}`,
 			this.httpOptions);
 	}
 

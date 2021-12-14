@@ -1,4 +1,4 @@
-import { IClient } from './../../@theme/interfaces/IClient';
+import { IClient } from '../../@theme/interfaces/IClient';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
