@@ -1,3 +1,39 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+    font-family: Roboto;
+    font-style: normal;
+    --white: #ffffff;
+    --primary-dark: #006d77;
+    --primary-light: #83c5be;
+    --secundary-dark: #e29578;
+    --secundary-light: #ffddd2;
+    --grayscale-1: #edf6f9;
+    --grayscale-2: #dee8eb;
+    --grayscale-3: #b5c5ca;
+    --grayscale-4: #7c8d93;
+    --grayscale-5: #3b4244;
+    --support-red: #eb5757;
+    --support-green: #27ae60;
+    --support-blue: #2f80ed;
+
+    /* cor do outliner */
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: var(--grayscale-4);
+    }
+    /* cor quando focado */
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: var(--primary-dark);
+    }
+    /* Cor da caixa ao dar inserir campo invalido */
+    .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: var(--primary-dark);
+    }
+}

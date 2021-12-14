@@ -1,13 +1,10 @@
 import { NgModule } from "@angular/core";
-import { WelcomeComponent } from "./components/welcome/welcome.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-	declarations: [
-		WelcomeComponent,
-	],
-	providers: [],
-    exports: [
-        WelcomeComponent
-    ]
+    imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+    declarations: [],
 })
-export class ThemeModule { }
+export class ThemeModule {}
