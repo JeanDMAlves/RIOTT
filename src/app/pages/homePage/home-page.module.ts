@@ -13,9 +13,10 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
+import { ActivitiesComponent } from "./activities/activities.component";
 
 @NgModule({
-    declarations: [NavegationHeaderComponent, HomePageComponent],
+    declarations: [NavegationHeaderComponent, HomePageComponent, ActivitiesComponent],
     imports: [
         CommonModule,
         ReactiveFormsModule,

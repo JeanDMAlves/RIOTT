@@ -11,7 +11,10 @@ export class AuthGuardService implements CanActivateChild {
      * @returns true se puder acessar e false caso contrário
      */
     public canActivateChild(): boolean {
-        if (localStorage.readToken()) {
+        const token = localStorage.readToken();
+        console.log(token);
+        if (token) {
+            console.log(token);
             return true;
         } else {
             this.router.navigate(["login"]);
