@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Idata, Ibutton } from "src/app/@theme/components/list-activity-card/list-activity-card.component";
 import { ActivityService } from "src/app/@core/services/activity.service";
 @Component({
@@ -6,13 +6,13 @@ import { ActivityService } from "src/app/@core/services/activity.service";
     templateUrl: "./activities.component.html",
     styleUrls: ["./activities.component.css"],
 })
-export class ActivitiesComponent {
-    tittle: string = "Atividades";
-    button: string = "Cadastrar nova atividade";
-    activitiesList: Idata[] = [];
+export class ActivitiesComponent implements OnInit {
+    public tittle: string = "Atividades";
+    public button: string = "Cadastrar nova atividade";
+    public activitiesList: Idata[] = [];
     constructor(private activities: ActivityService) {}
 
-    buttons: Ibutton[] = [
+    public buttons: Ibutton[] = [
         {
             label: "Excluir",
             class: "orange-button",
@@ -23,6 +23,10 @@ export class ActivitiesComponent {
         },
     ];
 
+    /**
+     * Lista todas as atividades existentes na lista de atividades
+     * e exibe elas na tela através do componente ListActivityCard
+     */
     public ngOnInit(): void {
         this.activities.getActivities(1, 10, 1, "ASC").subscribe((dataStorage) => {
             const data = dataStorage["data"]["rows"];
@@ -33,7 +37,6 @@ export class ActivitiesComponent {
                     id: activity.id,
                 };
                 this.activitiesList.push(item);
-                console.log(this.activitiesList);
             }
         });
     }
