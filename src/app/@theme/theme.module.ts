@@ -1,3 +1,4 @@
+import { MatButtonModule } from "@angular/material/button";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
@@ -6,7 +7,7 @@ import { ListActivityCardComponent } from "./components/list-activity-card/list-
 import { HeaderBoxComponent } from "./components/headerBox/header-box.component";
 
 @NgModule({
-    imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+    imports: [ReactiveFormsModule, CommonModule, HttpClientModule, MatButtonModule],
     declarations: [ListActivityCardComponent, HeaderBoxComponent],
     providers: [],
     exports: [ListActivityCardComponent, HeaderBoxComponent],
