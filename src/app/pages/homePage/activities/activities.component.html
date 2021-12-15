@@ -1,6 +1,6 @@
 <section class="atividades">
     <app-header-box [tittle]="tittle" [button]="button"></app-header-box>
     <div class="lista-atividades">
-        <app-list-activity-card *ngFor="let activity of activitiesList" [data]="activity" [buttons]="buttons"></app-list-activity-card>
+        <app-list-activity-card id="{{activity.id}}" *ngFor="let activity of activitiesList" [data]="activity" [buttons]="buttons"></app-list-activity-card>
     </div>
 </section>
