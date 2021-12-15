@@ -20,7 +20,7 @@ export class UserService {
     };
 
     public getUsers(page: number, size: number, order: number, orderBy: string = "ASC"): Observable<IUser> {
-        return this.http.get<IUser>(`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`, this.httpOptions);
+        return this.http.get<IUser>(`${this.url}?page=${page}&size=${size}&order=${order}&orderBy=${orderBy}`, this.httpOptions);
     }
 
     public postUser(newUser: IUser): Observable<IUser> {

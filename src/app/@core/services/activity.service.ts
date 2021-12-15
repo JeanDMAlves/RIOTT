@@ -22,7 +22,7 @@ export class ActivityService {
     public getActivities(page: number, size: number, order: number, orderBy: string = "ASC"): Observable<IActivities> {
         console.log(this.token);
         console.log(typeof this.token);
-        return this.http.get<IActivities>(`${this.url}?page=${page}&size=${size}&order=${order}&orderBy${orderBy}`, this.httpOptions);
+        return this.http.get<IActivities>(`${this.url}?page=${page}&size=${size}&order=${order}&orderBy=${orderBy}`, this.httpOptions);
     }
 
     public postActivity(activity: IActivity): Observable<IActivity> {
