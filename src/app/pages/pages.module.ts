@@ -5,14 +5,8 @@ import { PagesComponent } from "./pages.component";
 import { RouterModule } from "@angular/router";
 
 @NgModule({
-	imports: [
-        PagesRoutingModule,
-        ThemeModule,
-		RouterModule
-	],
-	declarations: [
-		PagesComponent,
-	],
-	providers: []
+    imports: [PagesRoutingModule, ThemeModule, RouterModule],
+    declarations: [PagesComponent],
+    providers: [],
 })
-export class PagesModule { }
+export class PagesModule {}

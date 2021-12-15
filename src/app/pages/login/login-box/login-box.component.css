@@ -15,6 +15,7 @@
     text-align: center;
 }
 
+/*TODO - utilizar classe dark-green-button*/
 .green-button {
     font-weight: 500;
     font-size: 16px;
@@ -37,19 +38,15 @@
     width: 306px;
 }
 
-.senha {
+.password {
     width: 306px;
 }
 
 .input {
-    top: 100px;
-    margin-left: 63%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    align-content: center;
     width: 306px;
     height: 361px;
-    position: absolute;
 }
