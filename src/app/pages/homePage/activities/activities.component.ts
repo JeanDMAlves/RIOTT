@@ -9,15 +9,10 @@ import { ActivityService } from "src/app/@core/services/activity.service";
 export class ActivitiesComponent {
     tittle: string = "Atividades";
     button: string = "Cadastrar nova atividade";
+    activitiesList: Idata[] = [];
+    constructor(private activities: ActivityService) {}
 
-    dataTeste: Idata[] = [
-        {
-            title: "Descrição da atividade",
-            value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac curabitur ante lectus.",
-        },
-    ];
-
-    buttonTeste: Ibutton[] = [
+    buttons: Ibutton[] = [
         {
             label: "Excluir",
             class: "orange-button",
@@ -28,11 +23,18 @@ export class ActivitiesComponent {
         },
     ];
 
-    constructor(private activities: ActivityService) {}
-
-    ngOnInit(): void {
-        this.activities.getActivities(1, 10, 1, "ASC").subscribe((dados) => {
-            console.log(dados["data"]);
+    public ngOnInit(): void {
+        this.activities.getActivities(1, 10, 1, "ASC").subscribe((dataStorage) => {
+            const data = dataStorage["data"]["rows"];
+            for (const activity of data) {
+                const item = {
+                    title: "Descrição da atividade",
+                    value: activity.description,
+                    id: activity.id,
+                };
+                this.activitiesList.push(item);
+                console.log(this.activitiesList);
+            }
         });
     }
 }

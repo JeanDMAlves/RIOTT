@@ -2,9 +2,9 @@
     <div *ngIf = "image">
         <img src="/"alt="uma imagem"/>
     </div>
-    <div *ngFor="let item of data" class="">
-        <h4 class="listBox-data-title">{{item.title}}</h4>
-        <p class="listBox-data-value">{{item.value}}</p>
+    <div id="{{data.id}}" >
+        <h4 class="listBox-data-title">{{data.title}}</h4>
+        <p class="listBox-data-value">{{data.value}}</p>
     </div>
     <div *ngIf="buttons">
         <button mat-button *ngFor="let button of buttons" class="{{button.class}}">
