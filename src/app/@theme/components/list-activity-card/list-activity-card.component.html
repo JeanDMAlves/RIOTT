@@ -7,7 +7,7 @@
         <p class="listBox-data-value">{{item.value}}</p>
     </div>
     <div *ngIf="buttons">
-        <button mat-button *ngFor="let button of buttons" class="{{button.class}}">
+        <button mat-button *ngFor="let button of buttons" id="button" class="{{button.class}}">
             {{button.icon}}
             {{button.label}}
         </button>
