@@ -1,3 +1,5 @@
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FeedbackComponent } from "./components/feedback/feedback.component";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
@@ -6,9 +8,9 @@ import { ListActivityCardComponent } from "./components/list-activity-card/list-
 import { HeaderBoxComponent } from "./components/headerBox/header-box.component";
 import { MatButtonModule } from "@angular/material/button";
 @NgModule({
-    imports: [ReactiveFormsModule, CommonModule, HttpClientModule, MatButtonModule],
-    declarations: [ListActivityCardComponent, HeaderBoxComponent],
+    imports: [ReactiveFormsModule, CommonModule, HttpClientModule, MatButtonModule, NgbModule],
+    declarations: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent],
     providers: [],
-    exports: [ListActivityCardComponent, HeaderBoxComponent],
+    exports: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent],
 })
 export class ThemeModule {}
