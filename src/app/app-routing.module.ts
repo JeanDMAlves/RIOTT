@@ -3,6 +3,7 @@ import { HomePageComponent } from "./pages/homePage/home-page.component";
 import { NgModule, NgModuleFactory, Type } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginScreenComponent } from "./pages/login/login-screen/login-screen.component";
+import { HistoricComponent } from "./pages/homePage/historic/historic.component";
 
 const routes: Routes = [
     {
@@ -18,6 +19,7 @@ const routes: Routes = [
         component: HomePageComponent,
         children: [
             { path: "Listas", component: ListsComponent },
+            { path: "Histórico", component: HistoricComponent },
             // { path: 'Atividades', component: ActivitiesComponent },
             // { path: 'Membros', component: MembersComponent },
         ],

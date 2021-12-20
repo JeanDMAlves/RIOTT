@@ -1,0 +1,66 @@
+mat-drawer-container {
+    height: 85vh;
+    width: 90%;
+    margin: 1.5rem auto 0 auto;
+}
+
+mat-drawer {
+    width: max-content;
+}
+
+.titulo-historico-membros {
+    color: var(--grayscale-5);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.historico-membros {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 5px;
+    padding-right: 15px;
+    margin-right: 8px;
+}
+
+mat-drawer-content {
+    background: var(--white);
+}
+
+.historico-listas {
+    width: 95%;
+    height: 74px;
+    margin: 0 auto;
+}
+
+.historico-listas-titulo {
+    color: var(--grayscale-5);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.historico-listas-items {
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+.selected {
+    border: 1px solid var(--primary-light);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 24px var(--primary-light);
+    border-radius: 4px;
+    border-right: 15px solid var(--primary-light);
+    width: max-content;
+}
+
+.item-historico-membros {
+    margin-bottom: 10px;
+    height: 92px;
+}
