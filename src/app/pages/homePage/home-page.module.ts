@@ -1,3 +1,4 @@
+import { MatButtonModule } from "@angular/material/button";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
@@ -14,9 +15,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
 import { ActivitiesComponent } from "./activities/activities.component";
+import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
 
 @NgModule({
-    declarations: [NavigationHeaderComponent, HomePageComponent, ActivitiesComponent],
+    declarations: [NavigationHeaderComponent, HomePageComponent, ActivitiesComponent, RegisterActivityComponent],
     imports: [
         NgbModule,
         CommonModule,
@@ -30,6 +32,7 @@ import { ActivitiesComponent } from "./activities/activities.component";
         MatFormFieldModule,
         MatInputModule,
         MatCardModule,
+        MatButtonModule,
     ],
 })
 export class HomePageModule {}

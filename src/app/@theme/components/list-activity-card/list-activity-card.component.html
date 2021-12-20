@@ -1,4 +1,4 @@
-<div class="listBox">
+<div #element class="listBox" id="{{data.id}}">
     <div *ngIf = "image">
         <img src="/" alt="uma imagem"/>
     </div>
@@ -7,7 +7,7 @@
         <p class="listBox-data-value">{{data.value}}</p>
     </div>
     <div *ngIf="buttons">
-        <button mat-button *ngFor="let button of buttons" class="{{button.class}}" id="button">
+        <button (click)="button.action(element)" mat-button *ngFor="let button of buttons" class="{{button.class}}">
             {{button.icon}}
             {{button.label}}
         </button>

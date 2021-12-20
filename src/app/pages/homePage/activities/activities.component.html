@@ -1,36 +1,18 @@
 <section class="atividades">
-    <app-header-box [tittle]="tittle" [button]="button" [content]="content"></app-header-box>
+    <app-header-box [title]="title" [button]="headerBoxButton"></app-header-box>
     <div class="lista-atividades">
         <app-list-activity-card 
-            id="{{activity.id}}" 
             *ngFor="let activity of activitiesList" 
             [data]="activity" 
             [buttons]="buttons">
         </app-list-activity-card>
-    </div>
+    </div> 
 </section>
 
-<ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="form-group">
-          <label for="dateOfBirth">Date of birth</label>
-          <div class="input-group">
-            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    </div>
-  </ng-template>
+<ng-template #modalBody>
+    <app-register-activity [propsModalRegister]="modalData"></app-register-activity>
+</ng-template>
+
+<ng-template #modalUpdateElement>
+    <app-register-activity [propsModalRegister]="modalUpdateElementData"></app-register-activity>
+</ng-template>

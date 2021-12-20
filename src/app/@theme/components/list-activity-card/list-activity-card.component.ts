@@ -1,4 +1,6 @@
 import { Component, Input } from "@angular/core";
+import { IButton } from "../../interfaces/IButton";
+import { Idata } from "../../interfaces/IData";
 
 @Component({
     selector: "app-list-activity-card",
@@ -7,20 +9,7 @@ import { Component, Input } from "@angular/core";
 })
 export class ListActivityCardComponent {
     @Input() data: Idata;
-    @Input() buttons: Ibutton[];
+    @Input() buttons: IButton[];
     @Input() image;
-}
-
-export interface Idata {
-    id?: string;
-    key?: string;
-    title: string;
-    value: string;
-}
-
-export interface Ibutton {
-    label: string;
-    class?: string;
-    icon?: string;
-    action?: string;
+    @Input() status: "editable" | "readonly";
 }

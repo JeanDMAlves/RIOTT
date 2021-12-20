@@ -1,33 +1,111 @@
-import { Component, OnInit } from "@angular/core";
-import { Idata, Ibutton } from "src/app/@theme/components/list-activity-card/list-activity-card.component";
+import { IActivity } from "./../../../@theme/interfaces/IActivities";
+import { ModalComponent } from "./../../../@theme/components/modal/modal.component";
+import { Component, OnInit, ViewChild, TemplateRef } from "@angular/core";
 import { ActivityService } from "src/app/@core/services/activity.service";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { IButton } from "src/app/@theme/interfaces/IButton";
+import { Idata } from "src/app/@theme/interfaces/IData";
+import { IModal } from "src/app/@theme/interfaces/IModal";
 @Component({
     selector: "app-activities",
     templateUrl: "./activities.component.html",
     styleUrls: ["./activities.component.css"],
 })
 export class ActivitiesComponent implements OnInit {
-    public tittle: string = "Atividades";
-    public button: string = "Cadastrar nova atividade";
+    @ViewChild("modalBody") modalBody: TemplateRef<any>;
+    @ViewChild("modalUpdateElement") modalUpdateElement: TemplateRef<any>;
+    public title: string = "Atividades";
+    public headerBoxButton: IButton;
     public activitiesList: Idata[] = [];
-    constructor(private activities: ActivityService) {}
+    private updateId: string;
 
-    public buttons: Ibutton[] = [
+    constructor(private activities: ActivityService, private modalService: NgbModal) {}
+
+    public buttons: IButton[] = [
         {
             label: "Excluir",
             class: "orange-button",
+            action: (parent: any): void => {
+                this.activities.deleteActivityById(parent.id).subscribe(parent.remove());
+            },
         },
         {
             label: "Editar",
             class: "light-green-button",
+            action: (parent: any): void => {
+                this.updateId = parent.id;
+                const openedModal = this.modalService.open(ModalComponent, { size: "xl" });
+                openedModal.componentInstance.modalBody = this.modalUpdateElement;
+                openedModal.componentInstance.title = "Editar Atividade";
+            },
         },
     ];
+
+    public modalUpdateElementData: IModal = {
+        title: "Altere os dados abaixo para editar uma atividade no RIOTT",
+        label: "Descrição da atividade",
+        buttons: [
+            {
+                label: "Salvar edição",
+                class: "dark-green-button register-activity-add-button",
+                action: (activity: IActivity): void => {
+                    const item = this.activitiesList.find((item) => item.id == this.updateId);
+                    item.value = activity.description;
+                    this.activities.putActivity(this.updateId, activity.description).subscribe();
+                    this.modalService.dismissAll();
+                },
+            },
+            {
+                label: "Cancelar",
+                class: "orange-button",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalData: IModal = {
+        title: "Insira os dados abaixo para cadastrar uma nova atividade ao RIOTT",
+        label: "Descrição da atividade",
+        buttons: [
+            {
+                label: "Adicionar atividade",
+                class: "dark-green-button register-activity-add-button",
+                action: (activity: IActivity): void => {
+                    this.activities.postActivity(activity).subscribe();
+                    this.activitiesList.push({
+                        title: "Descrição da atividade",
+                        value: activity.description,
+                    });
+                    this.modalService.dismissAll();
+                },
+            },
+            {
+                label: "Cancelar",
+                class: "orange-button",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
 
     /**
      * Lista todas as atividades existentes na lista de atividades
      * e exibe elas na tela através do componente ListActivityCard
      */
     public ngOnInit(): void {
+        this.headerBoxButton = {
+            label: "Cadastrar nova atividade",
+            class: "dark-green-button",
+            action: (): void => {
+                const openedModal = this.modalService.open(ModalComponent, { size: "xl" });
+                openedModal.componentInstance.modalBody = this.modalBody;
+                openedModal.componentInstance.title = "Cadastrar nova atividade";
+            },
+        };
+
         this.activities.getActivities(1, 10, 1, "ASC").subscribe((dataStorage) => {
             const data = dataStorage["data"]["rows"];
             for (const activity of data) {

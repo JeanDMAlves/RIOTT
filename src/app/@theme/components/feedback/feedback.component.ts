@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { IButton } from "../../interfaces/IButton";
 
 @Component({
     selector: "feedback",
@@ -13,9 +14,4 @@ export class FeedbackComponent {
 
 export interface IMessage {
     text: string;
-}
-
-export interface IButton {
-    label: string;
-    class: string;
 }
