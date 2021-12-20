@@ -63,7 +63,6 @@ body {
 
     .dark-green-button {
         width: 188px;
-
         color: var(--white);
         background: var(--primary-dark);
         border: 2px var(--primary-dark) solid;
@@ -71,7 +70,6 @@ body {
 
     .light-green-button {
         width: 69px;
-
         color: var(--white);
         background: var(--primary-light);
         border: 2px var(--primary-light) solid;
@@ -83,9 +81,6 @@ body {
         border: 2px var(--secondary-dark) solid;
     }
 }
-
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
