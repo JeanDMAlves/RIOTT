@@ -1,5 +1,5 @@
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { Component, Input } from "@angular/core";
+import { IButton } from "../../interfaces/IButton";
 
 @Component({
     selector: "app-header-box",
@@ -7,11 +7,6 @@ import { Component, Input } from "@angular/core";
     styleUrls: ["./header-box.component.css"],
 })
 export class HeaderBoxComponent {
-    @Input() tittle: string;
-    @Input() button: string;
-    @Input() content;
-    constructor(private modalService: NgbModal) {}
-    public openModal(): void {
-        this.modalService.open(this.content);
-    }
+    @Input() title: string;
+    @Input() button: IButton;
 }
