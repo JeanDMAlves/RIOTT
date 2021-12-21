@@ -8,10 +8,11 @@ import { ListActivityCardComponent } from "./components/list-activity-card/list-
 import { HeaderBoxComponent } from "./components/headerBox/header-box.component";
 import { MatButtonModule } from "@angular/material/button";
 import { ModalComponent } from "./components/modal/modal.component";
+import { ModalSuccessfulOperationComponent } from "./components/modal-successful-operation/modal-successful-operation.component";
 @NgModule({
     imports: [ReactiveFormsModule, CommonModule, HttpClientModule, MatButtonModule, NgbModule],
-    declarations: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent, ModalComponent],
+    declarations: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent, ModalComponent, ModalSuccessfulOperationComponent],
     providers: [NgbActiveModal],
-    exports: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent, ModalComponent],
+    exports: [ListActivityCardComponent, HeaderBoxComponent, FeedbackComponent, ModalComponent, ModalSuccessfulOperationComponent],
 })
 export class ThemeModule {}
