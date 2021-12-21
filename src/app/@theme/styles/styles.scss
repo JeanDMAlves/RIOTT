@@ -89,6 +89,10 @@ body {
         overflow: hidden;
     }
 
+    .modal-header {
+        border-bottom: 0;
+    }
+
     .modal-content {
         height: 100vh;
     }
