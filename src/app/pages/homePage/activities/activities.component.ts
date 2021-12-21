@@ -16,10 +16,15 @@ export class ActivitiesComponent implements OnInit {
     @ViewChild("modalBody") modalBody: TemplateRef<any>;
     @ViewChild("modalUpdateElement") modalUpdateElement: TemplateRef<any>;
     @ViewChild("modalRegisterSuccessful") modalRegisterSuccessful: TemplateRef<any>;
+    @ViewChild("modalUpdateSuccessful") modalUpdateSuccessful: TemplateRef<any>;
+    @ViewChild("modalDelete") modalDelete: TemplateRef<any>;
+    @ViewChild("modalDeleteSuccessful") modalDeleteSuccessful: TemplateRef<any>;
+
     public title: string = "Atividades";
     public headerBoxButton: IButton;
     public activitiesList: Idata[] = [];
     private updateId: string;
+    private itemParent: any;
 
     constructor(private activities: ActivityService, private modalService: NgbModal) {}
 
@@ -28,7 +33,8 @@ export class ActivitiesComponent implements OnInit {
             label: "Excluir",
             class: "orange-button",
             action: (parent: any): void => {
-                this.activities.deleteActivityById(parent.id).subscribe(parent.remove());
+                this.itemParent = parent;
+                this.openModals(this.modalDelete, "");
             },
         },
         {
@@ -51,8 +57,10 @@ export class ActivitiesComponent implements OnInit {
                 action: (activity: IActivity): void => {
                     const item = this.activitiesList.find((item) => item.id == this.updateId);
                     item.value = activity.description;
-                    this.activities.putActivity(this.updateId, activity.description).subscribe();
-                    this.modalService.dismissAll();
+                    this.activities.putActivity(this.updateId, activity.description).subscribe(() => {
+                        this.modalService.dismissAll();
+                        this.openModals(this.modalUpdateSuccessful, "");
+                    });
                 },
             },
             {
@@ -96,6 +104,59 @@ export class ActivitiesComponent implements OnInit {
     public modalRegisterSuccessfulData: IResultOperation = {
         img: "../../../../assets/Successful.png",
         message: "Atividade adicionada com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalUpdateSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Atividade editada com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalDeleteData: IResultOperation = {
+        img: "../../../../assets/Warning.png",
+        message: "Deseja realmente excluir essa atividade",
+        buttons: [
+            {
+                label: "Confirmar e excluir a atividade",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.activities.deleteActivityById(this.itemParent.id).subscribe(() => {
+                        this.modalService.dismissAll();
+                        this.openModals(this.modalDeleteSuccessful, "");
+                        this.itemParent.remove();
+                    });
+                },
+            },
+            {
+                label: "Cancelar",
+                class: "orange-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalDeleteSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Atividade excluída com sucesso!",
         buttons: [
             {
                 label: "Finalizar",
