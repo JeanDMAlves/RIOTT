@@ -1,3 +1,4 @@
+import { IResultOperation } from "./../../../@theme/interfaces/IResultOperation";
 import { IActivity } from "./../../../@theme/interfaces/IActivities";
 import { ModalComponent } from "./../../../@theme/components/modal/modal.component";
 import { Component, OnInit, ViewChild, TemplateRef } from "@angular/core";
@@ -14,6 +15,7 @@ import { IModal } from "src/app/@theme/interfaces/IModal";
 export class ActivitiesComponent implements OnInit {
     @ViewChild("modalBody") modalBody: TemplateRef<any>;
     @ViewChild("modalUpdateElement") modalUpdateElement: TemplateRef<any>;
+    @ViewChild("modalRegisterSuccessful") modalRegisterSuccessful: TemplateRef<any>;
     public title: string = "Atividades";
     public headerBoxButton: IButton;
     public activitiesList: Idata[] = [];
@@ -34,9 +36,7 @@ export class ActivitiesComponent implements OnInit {
             class: "light-green-button",
             action: (parent: any): void => {
                 this.updateId = parent.id;
-                const openedModal = this.modalService.open(ModalComponent, { size: "xl" });
-                openedModal.componentInstance.modalBody = this.modalUpdateElement;
-                openedModal.componentInstance.title = "Editar Atividade";
+                this.openModals(this.modalUpdateElement, "Editar Atividade");
             },
         },
     ];
@@ -73,12 +73,14 @@ export class ActivitiesComponent implements OnInit {
                 label: "Adicionar atividade",
                 class: "dark-green-button register-activity-add-button",
                 action: (activity: IActivity): void => {
-                    this.activities.postActivity(activity).subscribe();
-                    this.activitiesList.push({
-                        title: "Descrição da atividade",
-                        value: activity.description,
+                    this.activities.postActivity(activity).subscribe(() => {
+                        this.activitiesList.push({
+                            title: "Descrição da atividade",
+                            value: activity.description,
+                        });
+                        this.modalService.dismissAll();
+                        this.openModals(this.modalRegisterSuccessful, "");
                     });
-                    this.modalService.dismissAll();
                 },
             },
             {
@@ -91,6 +93,32 @@ export class ActivitiesComponent implements OnInit {
         ],
     };
 
+    public modalRegisterSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Atividade adicionada com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    /**
+     * Abre um modal
+     * @param modalBody - Corpo do modal
+     * @param title - Título que será exibido
+     * na parte esquerda do header do modal
+     */
+    private openModals(modalBody: TemplateRef<any>, title?: string): void {
+        const openedModal = this.modalService.open(ModalComponent, { size: "xl" });
+        openedModal.componentInstance.modalBody = modalBody;
+        openedModal.componentInstance.title = title;
+    }
+
     /**
      * Lista todas as atividades existentes na lista de atividades
      * e exibe elas na tela através do componente ListActivityCard
@@ -100,9 +128,7 @@ export class ActivitiesComponent implements OnInit {
             label: "Cadastrar nova atividade",
             class: "dark-green-button",
             action: (): void => {
-                const openedModal = this.modalService.open(ModalComponent, { size: "xl" });
-                openedModal.componentInstance.modalBody = this.modalBody;
-                openedModal.componentInstance.title = "Cadastrar nova atividade";
+                this.openModals(this.modalBody, "Cadastrar nova atividade");
             },
         };
 
