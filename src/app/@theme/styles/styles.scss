@@ -46,6 +46,10 @@ body {
         border-radius: 90px;
     }
 
+    a:hover {
+        color: var(--primary-dark);
+    }
+
     button:hover {
         cursor: pointer;
     }
