@@ -5,7 +5,7 @@ import { Component, OnInit, ViewChild, TemplateRef } from "@angular/core";
 import { ActivityService } from "src/app/@core/services/activity.service";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { IButton } from "src/app/@theme/interfaces/IButton";
-import { Idata } from "src/app/@theme/interfaces/IData";
+import { IData } from "src/app/@theme/interfaces/IData";
 import { IModal } from "src/app/@theme/interfaces/IModal";
 @Component({
     selector: "app-activities",
@@ -22,7 +22,7 @@ export class ActivitiesComponent implements OnInit {
 
     public title: string = "Atividades";
     public headerBoxButton: IButton;
-    public activitiesList: Idata[] = [];
+    public activitiesList: IData[] = [];
     private updateId: string;
     private itemParent: any;
 
@@ -102,7 +102,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalRegisterSuccessfulData: IResultOperation = {
-        img: "../../../../assets/Successful.png",
+        image: "../../../../assets/Successful.png",
         message: "Atividade adicionada com sucesso!",
         buttons: [
             {
@@ -116,7 +116,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalUpdateSuccessfulData: IResultOperation = {
-        img: "../../../../assets/Successful.png",
+        image: "../../../../assets/Successful.png",
         message: "Atividade editada com sucesso!",
         buttons: [
             {
@@ -130,7 +130,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalDeleteData: IResultOperation = {
-        img: "../../../../assets/Warning.png",
+        image: "../../../../assets/Warning.png",
         message: "Deseja realmente excluir essa atividade",
         buttons: [
             {
@@ -155,7 +155,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalDeleteSuccessfulData: IResultOperation = {
-        img: "../../../../assets/Successful.png",
+        image: "../../../../assets/Successful.png",
         message: "Atividade excluída com sucesso!",
         buttons: [
             {

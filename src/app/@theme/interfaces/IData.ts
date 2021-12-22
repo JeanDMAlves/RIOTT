@@ -1,4 +1,4 @@
-export interface Idata {
+export interface IData {
     id?: string;
     key?: string;
     title: string;
