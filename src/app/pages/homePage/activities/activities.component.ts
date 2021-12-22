@@ -1,5 +1,5 @@
 import { IResultOperation } from "./../../../@theme/interfaces/IResultOperation";
-import { IActivity } from "./../../../@theme/interfaces/IActivities";
+import { IActivities } from "./../../../@theme/interfaces/IActivities";
 import { ModalComponent } from "./../../../@theme/components/modal/modal.component";
 import { Component, OnInit, ViewChild, TemplateRef } from "@angular/core";
 import { ActivityService } from "src/app/@core/services/activity.service";
@@ -54,7 +54,7 @@ export class ActivitiesComponent implements OnInit {
             {
                 label: "Salvar edição",
                 class: "dark-green-button register-activity-add-button",
-                action: (activity: IActivity): void => {
+                action: (activity: IActivities): void => {
                     const item = this.activitiesList.find((item) => item.id == this.updateId);
                     item.value = activity.description;
                     this.activities.putActivity(this.updateId, activity.description).subscribe(() => {
@@ -80,7 +80,7 @@ export class ActivitiesComponent implements OnInit {
             {
                 label: "Adicionar atividade",
                 class: "dark-green-button register-activity-add-button",
-                action: (activity: IActivity): void => {
+                action: (activity: IActivities): void => {
                     this.activities.postActivity(activity).subscribe(() => {
                         this.activitiesList.push({
                             title: "Descrição da atividade",

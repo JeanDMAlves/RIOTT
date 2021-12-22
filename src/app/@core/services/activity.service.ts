@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { IActivities, IActivity } from "../../@theme/interfaces/IActivities";
+import { IActivities } from "../../@theme/interfaces/IActivities";
 import { LocalStorageService } from "./local-storage.service";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
@@ -38,8 +38,8 @@ export class ActivityService {
      * @param activity - Atividade que irá ser cadastrada
      * @returns retorna se a atividade foi cadastrada com sucesso
      */
-    public postActivity(activity: IActivity): Observable<IActivity> {
-        return this.http.post<IActivity>(this.url, activity, this.httpOptions);
+    public postActivity(activity: IActivities): Observable<IActivities> {
+        return this.http.post<IActivities>(this.url, activity, this.httpOptions);
     }
 
     /**
@@ -49,12 +49,12 @@ export class ActivityService {
      * @returns um observable que informa se a atividade
      * foi alterada com sucesso
      */
-    public putActivity(taskId: string, newDescription: string): Observable<IActivity> {
-        const newActivityDescription: IActivity = {
+    public putActivity(taskId: string, newDescription: string): Observable<IActivities> {
+        const newActivityDescription: IActivities = {
             id: taskId,
             description: newDescription,
         };
-        return this.http.put<IActivity>(this.url, newActivityDescription, this.httpOptions);
+        return this.http.put<IActivities>(this.url, newActivityDescription, this.httpOptions);
     }
 
     /**
@@ -63,8 +63,8 @@ export class ActivityService {
      * @returns Um observable que monitorará a requisição,
      * caso seja bem sucedida retornará a atividade
      */
-    public getActivityById(id: string): Observable<IActivity> {
-        return this.http.get<IActivity>(this.url + `/${id}`, this.httpOptions);
+    public getActivityById(id: string): Observable<IActivities> {
+        return this.http.get<IActivities>(this.url + `/${id}`, this.httpOptions);
     }
 
     /**
@@ -73,7 +73,7 @@ export class ActivityService {
      * @returns Um observable que informa se a atividade
      * foi excluída com sucesso
      */
-    public deleteActivityById(id: string): Observable<IActivity> {
-        return this.http.delete<IActivity>(this.url + `/${id}`, this.httpOptions);
+    public deleteActivityById(id: string): Observable<IActivities> {
+        return this.http.delete<IActivities>(this.url + `/${id}`, this.httpOptions);
     }
 }

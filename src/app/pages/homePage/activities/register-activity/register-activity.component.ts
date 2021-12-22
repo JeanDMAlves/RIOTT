@@ -1,4 +1,4 @@
-import { IActivity } from "./../../../../@theme/interfaces/IActivities";
+import { IActivities } from "./../../../../@theme/interfaces/IActivities";
 import { Validators } from "@angular/forms";
 import { FormControl } from "@angular/forms";
 import { Component, Input } from "@angular/core";
@@ -14,7 +14,7 @@ export class RegisterActivityComponent {
     @Input() component: any;
     public activity: FormControl = new FormControl("", [Validators.required]);
 
-    public setActivity(): IActivity {
+    public setActivity(): IActivities {
         return {
             description: this.activity.value,
         };
