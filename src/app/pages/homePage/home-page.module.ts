@@ -13,9 +13,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
 import { MembersComponent } from "./members/members.component";
+import { ModalComponent } from "src/app/@theme/components/modal/modal.component";
 
 @NgModule({
-    declarations: [NavegationHeaderComponent, HomePageComponent, MembersComponent],
+    declarations: [NavegationHeaderComponent, HomePageComponent, MembersComponent, ModalComponent],
     imports: [
         CommonModule,
         ReactiveFormsModule,
