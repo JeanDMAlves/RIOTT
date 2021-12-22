@@ -1,15 +1,10 @@
-.atividades {
+.activities {
     width: 90%;
     margin: 1.5rem auto 0 auto;
 }
 
-.lista-atividades {
+.activities-list {
     overflow-y: auto;
     padding-right: 1.5rem;
     max-height: 70vh;
-}
-
-.modal-activities {
-    width: 90%;
-    margin: 1rem auto;
 }

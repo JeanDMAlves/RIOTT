@@ -9,11 +9,7 @@ const homeRoutes: Routes = [
     {
         path: "",
         component: HomePageComponent,
-        children: [
-            // { path: 'Listas', component: ListsComponent },
-            { path: "Atividades", component: ActivitiesComponent },
-            // { path: 'Membros', component: MembersComponent },
-        ],
+        children: [{ path: "Atividades", component: ActivitiesComponent }],
     },
 ];
 
