@@ -1,12 +1,12 @@
-<section class="atividades">
+<section class="activities">
     <app-header-box [title]="title" [button]="headerBoxButton"></app-header-box>
-    <div class="lista-atividades">
-        <app-list-activity-card 
-            *ngFor="let activity of activitiesList" 
-            [data]="activity" 
+    <div class="activities-list">
+        <app-list-activity-card
+            *ngFor="let activity of activitiesList"
+            [data]="activity"
             [buttons]="buttons">
         </app-list-activity-card>
-    </div> 
+    </div>
 </section>
 
 <ng-template #modalBody>
