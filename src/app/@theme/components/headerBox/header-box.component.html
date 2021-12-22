@@ -1,4 +1,4 @@
 <div class="atividades-header">
-    <h2 class="atividades-titulo">{{tittle}}:</h2>
-    <button mat-button class="dark-green-button header-button" id="button">{{button}}</button>
+    <h2 class="atividades-titulo">{{title}}:</h2>
+    <button (click)="button.action()" mat-button [class]="button.class" id="button">{{button.label}}</button>
 </div>

@@ -1,42 +1,62 @@
-import { Component } from '@angular/core';
-import { Ibutton, Idata } from 'src/app/@theme/components/list-activity-card/list-activity-card.component';
-
+import { Component, OnInit } from "@angular/core";
+import { MemberService } from "src/app/@core/services/member.service";
+import { IButton } from "src/app/@theme/interfaces/IButton";
+import { IData } from "src/app/@theme/interfaces/IData";
+import { IMember } from "src/app/@theme/interfaces/IMember";
 @Component({
-  selector: 'app-members',
-  templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css']
+    selector: "app-members",
+    templateUrl: "./members.component.html",
+    styleUrls: ["./members.component.css"],
 })
-export class MembersComponent {
-	tittle: string = 'Membros'
-	button: string = 'Cadastrar novo membro'
+export class MembersComponent implements OnInit {
+    public memberList: IMember[] = [];
+    public memberHeaderTitle: string = "Membros";
+    public memberHeaderButton: IButton = {
+        label: "Cadastrar novo membro",
+        class: "dark-green-button",
+        action: () => {
+            console.log(this.memberList);
+        },
+    };
 
-  dataTeste:Idata[] = [
-		{
-		title: 'Membro:',
-		value:'Luisa Sousa'
-		},
-    {
-      title: 'Data de nascimento:',
-      value:'Luisa Sousa'
-    },
-    {
-      title: 'Valor da mesada:',
-      value:'R$ 100,00'
-    },
-	]
+    constructor(private memberService: MemberService) {}
 
-  buttonTeste: Ibutton[] = [
-		{
-			label: 'Excluir',
-			class: 'orange-button',
-		},
-		{
-			label: 'Editar',
-			class: 'light-green-button',
-		},
-		{
-			label: 'Ver lista',
-			class: 'dark-green-button',
-		},
-	]
+    dataItem: IData[] = [
+        {
+            title: "Membro:",
+            value: "Luisa Sousa",
+        },
+        {
+            title: "Data de nascimento:",
+            value: "Luisa Sousa",
+        },
+        {
+            title: "Valor da mesada:",
+            value: "R$ 100,00",
+        },
+    ];
+
+    buttons: IButton[] = [
+        {
+            label: "Excluir",
+            class: "orange-button",
+        },
+        {
+            label: "Editar",
+            class: "light-green-button",
+        },
+        {
+            label: "Ver lista",
+            class: "dark-green-button",
+        },
+    ];
+
+    public ngOnInit(): void {
+        this.memberService.getMembers(1, 50, 1).subscribe((data) => {
+            const members: IMember[] = data["data"]["rows"];
+            for (const member of members) {
+                this.memberList.push(member);
+            }
+        });
+    }
 }

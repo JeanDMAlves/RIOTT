@@ -21,18 +21,21 @@ export class LocalStorageService {
     }
 
     /**
+     * Deleta o TokenLogin do localStorage
+     */
+    public deleteToken(): void {
+        if (this.storage) {
+            return this.storage.removeItem(this.key);
+        }
+    }
+
+    /**
      * Lê o valor atribuído a chave 'TokenLogin' e o retorna
      * @returns Retorna o token de login do localStorage
      */
     public readToken(): string {
         if (this.storage) {
             return this.storage.getItem(this.key);
-        }
-    }
-
-    public deleteToken(): void {
-        if (this.storage) {
-            return this.storage.removeItem(this.key);
         }
     }
 }

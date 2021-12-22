@@ -4,13 +4,11 @@
     align-items: baseline;
     margin-bottom: 1.5rem;
 }
+
 .atividades-titulo {
+    font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    color: var(--greyscale-5);
+    color: var(--grayscale-5);
     margin: 0;
-}
-
-.header-button {
-    max-width: 200px;
 }
