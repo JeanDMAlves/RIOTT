@@ -193,7 +193,7 @@ export class ActivitiesComponent implements OnInit {
             },
         };
 
-        this.activities.getActivities(1, 10, 1, "ASC").subscribe((dataStorage) => {
+        this.activities.getActivities(1, 100, 1, "ASC").subscribe((dataStorage) => {
             const data = dataStorage["data"]["rows"];
             for (const activity of data) {
                 const item = {
