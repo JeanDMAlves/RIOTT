@@ -17,8 +17,16 @@ import { MatCardModule } from "@angular/material/card";
 import { ActivitiesComponent } from "./activities/activities.component";
 import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
 import { MembersComponent } from "./members/members.component";
+import { MemberBoxComponent } from "./members/member-box/member-box.component";
 @NgModule({
-    declarations: [NavigationHeaderComponent, HomePageComponent, ActivitiesComponent, MembersComponent, RegisterActivityComponent],
+    declarations: [
+        NavigationHeaderComponent,
+        HomePageComponent,
+        ActivitiesComponent,
+        MembersComponent,
+        RegisterActivityComponent,
+        MemberBoxComponent,
+    ],
     imports: [
         NgbModule,
         CommonModule,

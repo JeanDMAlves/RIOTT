@@ -1,0 +1,29 @@
+<div class="members-list" *ngFor="let memberItem of memberList" id="{{memberItem.id}}">
+    <img class="members-image"src="http://34.136.200.153/{{memberItem.photo}}">
+
+    <div>
+        <h4 class="header">Membro</h4>
+        <p class="content">{{memberItem.name}}</p>
+    </div>
+
+    <div>
+        <h4 class="header">Data de nascimento</h4>
+        <p class="content">{{memberItem.birthday | date: 'dd/MM/yyyy'}}</p>
+    </div>
+
+    <div>
+        <h4 class="header">Valor da mesada</h4>
+        <p class="content">{{memberItem.reward | currency:'BRL'}}</p>
+    </div>
+
+    <div *ngIf="buttons">
+        <button
+        (click)="button.action()"
+        mat-button
+        *ngFor="let button of buttons"
+        class="{{button.class}}">
+            {{button.icon}}
+            {{button.label}}
+        </button>
+    </div>
+</div>

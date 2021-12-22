@@ -36,7 +36,7 @@ export class MembersComponent implements OnInit {
         },
     ];
 
-    buttons: IButton[] = [
+    memberBoxButtons: IButton[] = [
         {
             label: "Excluir",
             class: "orange-button",
