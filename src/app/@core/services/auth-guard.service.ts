@@ -2,7 +2,9 @@ import { Injectable } from "@angular/core";
 import { CanActivateChild, Router } from "@angular/router";
 import { LocalStorageService } from "./local-storage.service";
 
-@Injectable()
+@Injectable({
+    providedIn: "root",
+})
 export class AuthGuardService implements CanActivateChild {
     constructor(private localStorage: LocalStorageService, private router: Router) {}
 
@@ -11,7 +13,8 @@ export class AuthGuardService implements CanActivateChild {
      * @returns true se puder acessar e false caso contrário
      */
     public canActivateChild(): boolean {
-        if (localStorage.readToken()) {
+        const token = this.localStorage.readToken();
+        if (token) {
             return true;
         } else {
             this.router.navigate(["login"]);
