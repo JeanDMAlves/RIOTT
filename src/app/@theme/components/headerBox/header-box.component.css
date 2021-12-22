@@ -1,11 +1,11 @@
-.atividades-header {
+.activities-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1.5rem;
 }
 
-.atividades-titulo {
+.activities-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
