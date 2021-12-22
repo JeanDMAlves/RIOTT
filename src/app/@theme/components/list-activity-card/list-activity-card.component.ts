@@ -10,6 +10,6 @@ import { IData } from "../../interfaces/IData";
 export class ListActivityCardComponent {
     @Input() data: IData;
     @Input() buttons: IButton[];
-    @Input() image;
+    @Input() image: string;
     @Input() status: "editable" | "readonly";
 }

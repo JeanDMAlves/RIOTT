@@ -102,7 +102,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalRegisterSuccessfulData: IResultOperation = {
-        image: "../../../../assets/Successful.png",
+        img: "../../../../assets/Successful.png",
         message: "Atividade adicionada com sucesso!",
         buttons: [
             {
@@ -116,7 +116,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalUpdateSuccessfulData: IResultOperation = {
-        image: "../../../../assets/Successful.png",
+        img: "../../../../assets/Successful.png",
         message: "Atividade editada com sucesso!",
         buttons: [
             {
@@ -130,7 +130,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalDeleteData: IResultOperation = {
-        image: "../../../../assets/Warning.png",
+        img: "../../../../assets/Warning.png",
         message: "Deseja realmente excluir essa atividade",
         buttons: [
             {
@@ -155,7 +155,7 @@ export class ActivitiesComponent implements OnInit {
     };
 
     public modalDeleteSuccessfulData: IResultOperation = {
-        image: "../../../../assets/Successful.png",
+        img: "../../../../assets/Successful.png",
         message: "Atividade excluída com sucesso!",
         buttons: [
             {
