@@ -8,10 +8,6 @@ import { IButton } from "../../interfaces/IButton";
 })
 export class FeedbackComponent {
     @Input() image;
-    @Input() message: IMessage;
+    @Input() message: string;
     @Input() buttons: IButton[];
-}
-
-export interface IMessage {
-    text: string;
 }
