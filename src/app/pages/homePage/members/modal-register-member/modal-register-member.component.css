@@ -1,0 +1,13 @@
+.modalRegisterMember {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15vw;
+    margin: 4rem auto;
+    margin-bottom: 1rem;
+}
+
+.dark-green-button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}

@@ -18,6 +18,9 @@ import { ActivitiesComponent } from "./activities/activities.component";
 import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
 import { MembersComponent } from "./members/members.component";
 import { MemberBoxComponent } from "./members/member-box/member-box.component";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
+import { ModalRegisterMemberComponent } from "./members/modal-register-member/modal-register-member.component";
 @NgModule({
     declarations: [
         NavigationHeaderComponent,
@@ -26,8 +29,11 @@ import { MemberBoxComponent } from "./members/member-box/member-box.component";
         MembersComponent,
         RegisterActivityComponent,
         MemberBoxComponent,
+        ModalRegisterMemberComponent,
     ],
     imports: [
+        MatNativeDateModule,
+        MatDatepickerModule,
         NgbModule,
         CommonModule,
         ReactiveFormsModule,

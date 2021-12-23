@@ -2,3 +2,7 @@
     <app-header-box [title]="memberHeaderTitle" [button]="memberHeaderButton"></app-header-box>
     <app-member-box [memberList]="memberList" [buttons]="memberBoxButtons"></app-member-box>
 </section>
+
+<ng-template #modalRegisterMember>
+    <app-modal-register-member [propsModalRegister]="modalRegisterMemberData"></app-modal-register-member>
+</ng-template>

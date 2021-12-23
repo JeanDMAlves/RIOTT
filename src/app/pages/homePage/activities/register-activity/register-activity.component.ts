@@ -11,7 +11,6 @@ import { IModal } from "src/app/@theme/interfaces/IModal";
 })
 export class RegisterActivityComponent {
     @Input() propsModalRegister: IModal;
-    @Input() component: any;
     public activity: FormControl = new FormControl("", [Validators.required]);
 
     public setActivity(): IActivity {

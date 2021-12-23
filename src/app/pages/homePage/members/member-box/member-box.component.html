@@ -1,4 +1,4 @@
-<div class="members-list" *ngFor="let memberItem of memberList" id="{{memberItem.id}}">
+<div #element class="members-list" *ngFor="let memberItem of memberList" id="{{memberItem.id}}">
     <img class="members-image"src="http://34.136.200.153/{{memberItem.photo}}">
 
     <div>
@@ -18,7 +18,7 @@
 
     <div *ngIf="buttons">
         <button
-        (click)="button.action()"
+        (click)="button.action(element)"
         mat-button
         *ngFor="let button of buttons"
         class="{{button.class}}">
