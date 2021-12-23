@@ -1,0 +1,27 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened>
+        <h2 class="titulo-historico-membros">Históricos:</h2>
+        <div class="historico-membros">
+            <app-historic-member class="item-historico-membros"
+            (click)="setSelected(member.id)"
+            [class.selected]="member.id == selectedId"
+            *ngFor="let member of members"
+            [name]="member.name"></app-historic-member>
+        </div>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <div class="historico-listas">
+            <h3 class="historico-listas-titulo">Listas finalizadas:</h3>
+            <div class="historico-listas-items">
+                <app-historic-finished-lists
+                *ngFor="let list of finishedLists"
+                [listName]="list.listName"
+                [failedTasks]="list.failedTasks"
+                [initialDate]="list.initialDate"
+                [finalDate]="list.finalDate"
+                ></app-historic-finished-lists>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

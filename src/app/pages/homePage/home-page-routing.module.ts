@@ -1,3 +1,4 @@
+import { HistoricComponent } from "./historic/historic.component";
 // import { MembersComponent } from './members/members.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -14,6 +15,7 @@ const homeRoutes: Routes = [
             { path: "Listas", component: ListsComponent },
             { path: "Membros", component: MembersComponent },
             { path: "Atividades", component: ActivitiesComponent },
+            { path: "Histórico", component: HistoricComponent },
         ],
     },
 ];

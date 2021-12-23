@@ -1,3 +1,6 @@
+import { HistoricMemberComponent } from "./historic/historic-members/historic-member.component";
+import { HistoricFinishedListsComponent } from "./historic/historic-finished-lists/historic-finished-lists.component";
+import { HistoricComponent } from "./historic/historic.component";
 import { ListsComponent } from "./lists/lists.component";
 import { ManageButtonComponent } from "./lists/manage-button/manage-button.component";
 import { ListMemberItemComponent } from "./lists/list-member-item/list-member-item.component";
@@ -40,6 +43,9 @@ import { ModalRegisterMemberComponent } from "./members/modal-register-member/mo
         ListMemberItemComponent,
         ManageButtonComponent,
         ListsComponent,
+        HistoricComponent,
+        HistoricFinishedListsComponent,
+        HistoricMemberComponent,
     ],
     imports: [
         MatNativeDateModule,
