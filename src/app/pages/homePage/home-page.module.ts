@@ -1,3 +1,8 @@
+import { ListsComponent } from "./lists/lists.component";
+import { ManageButtonComponent } from "./lists/manage-button/manage-button.component";
+import { ListMemberItemComponent } from "./lists/list-member-item/list-member-item.component";
+import { ListMemberActivitiesComponent } from "./lists/list-member-activities/list-member-activities.component";
+import { ListMemberAbsencesComponent } from "./lists/list-member-absences/list-member-absences.component";
 import { MatButtonModule } from "@angular/material/button";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { NgModule } from "@angular/core";
@@ -30,6 +35,11 @@ import { ModalRegisterMemberComponent } from "./members/modal-register-member/mo
         RegisterActivityComponent,
         MemberBoxComponent,
         ModalRegisterMemberComponent,
+        ListMemberAbsencesComponent,
+        ListMemberActivitiesComponent,
+        ListMemberItemComponent,
+        ManageButtonComponent,
+        ListsComponent,
     ],
     imports: [
         MatNativeDateModule,

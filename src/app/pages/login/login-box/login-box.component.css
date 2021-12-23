@@ -15,13 +15,9 @@
     text-align: center;
 }
 
-/*TODO - utilizar classe dark-green-button*/
-.green-button {
-    font-weight: 500;
+.dark-green-button {
     font-size: 16px;
     line-height: 19px;
-
-    color: var(--white);
 
     display: flex;
     flex-direction: row;
@@ -29,9 +25,6 @@
     align-items: center;
     padding: 16px 24px;
     width: 100%;
-    border-radius: 4px;
-
-    background: var(--primary-dark);
 }
 
 .email {
