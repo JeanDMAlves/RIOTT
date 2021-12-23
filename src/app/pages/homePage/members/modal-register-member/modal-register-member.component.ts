@@ -4,6 +4,7 @@ import { FormControl } from "@angular/forms";
 import { Component, Input } from "@angular/core";
 import { IModal } from "src/app/@theme/interfaces/IModal";
 import { formatDate } from "@angular/common";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: "app-modal-register-member",
@@ -18,6 +19,7 @@ export class ModalRegisterMemberComponent {
     public memberBirthday: FormControl = new FormControl("", [Validators.required]);
     public memberReward: FormControl = new FormControl("", [Validators.required]);
 
+    constructor(public modalService: NgbModal) {}
     public setMember(): IMember {
         return {
             name: this.memberName.value,
@@ -25,5 +27,9 @@ export class ModalRegisterMemberComponent {
             birthday: formatDate(this.memberBirthday.value, "yyyy-MM-dd", "en-US"),
             reward: this.memberReward.value,
         };
+    }
+
+    public closeModal(): void {
+        this.modalService.dismissAll();
     }
 }

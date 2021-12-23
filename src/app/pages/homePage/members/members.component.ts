@@ -1,3 +1,5 @@
+import { Router } from "@angular/router";
+import { IResultOperation } from "./../../../@theme/interfaces/IResultOperation";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { Component, OnInit, TemplateRef, ViewChild } from "@angular/core";
 import { MemberService } from "src/app/@core/services/member.service";
@@ -13,6 +15,11 @@ import { IModal } from "src/app/@theme/interfaces/IModal";
 })
 export class MembersComponent implements OnInit {
     @ViewChild("modalRegisterMember") modalRegisterMember: TemplateRef<any>;
+    @ViewChild("modalRegisterSuccessful") modalRegisterSuccessful: TemplateRef<any>;
+    @ViewChild("modalUpdateElement") modalUpdateElement: TemplateRef<any>;
+    @ViewChild("modalDelete") modalDelete: TemplateRef<any>;
+    @ViewChild("modalDeleteSuccessful") modalDeleteSuccessful: TemplateRef<any>;
+    @ViewChild("modalUpdateSuccessful") modalUpdateSuccessful: TemplateRef<any>;
 
     public memberList: IMember[] = [];
     public memberHeaderTitle: string = "Membros";
@@ -20,7 +27,7 @@ export class MembersComponent implements OnInit {
     private itemParent: any;
     private updateId: string;
 
-    constructor(private memberService: MemberService, private modalService: NgbModal) {}
+    constructor(private memberService: MemberService, private modalService: NgbModal, private router: Router) {}
 
     public memberBoxButtons: IButton[] = [
         {
@@ -28,23 +35,23 @@ export class MembersComponent implements OnInit {
             class: "orange-button",
             action: (parent: any): void => {
                 this.itemParent = parent;
-                this.memberService.deleteMemberById(parent.id).subscribe(() => {
-                    this.itemParent.remove();
-                });
+                this.openModals(this.modalDelete, "");
             },
         },
         {
             label: "Editar",
             class: "light-green-button",
-            // action: (parent: any): void => {
-            //     this.updateId = parent.id;
-            //     this.openModals(this.modalUpdateElement, "Editar Atividade");
-            // },
+            action: (parent: any): void => {
+                this.updateId = parent.id;
+                this.openModals(this.modalUpdateElement, "Editar Membro");
+            },
         },
         {
             label: "Ver lista",
             class: "dark-green-button",
-            // action: ()=> {}
+            action: (): void => {
+                this.router.navigate(["pages/home/Listas"]);
+            },
         },
     ];
 
@@ -55,17 +62,94 @@ export class MembersComponent implements OnInit {
                 label: "Cadastrar membro",
                 class: "dark-green-button",
                 action: (member: IMember): void => {
-                    console.log(member);
                     this.memberService.postMember(member.name, member.photo, member.birthday, member.reward).subscribe(() => {
                         this.memberList.push(member);
                         this.modalService.dismissAll();
-                        // this.openModals(this.modalRegisterSuccessful, "");
+                        this.openModals(this.modalRegisterSuccessful, "");
+                    });
+                },
+            },
+        ],
+    };
+
+    public modalRegisterSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Membro adicionado com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalUpdateElementData: IModal = {
+        title: "Altere os dados abaixo para editar o cadastro de um membro no RIOTT",
+        buttons: [
+            {
+                label: "Salvar edição",
+                class: "dark-green-button",
+                action: (member: IMember): void => {
+                    let item = this.memberList.find((item) => item.id == this.updateId);
+                    item = member;
+                    this.memberService.putMember(this.updateId, item.name, item.birthday, item.reward, item.photo).subscribe(() => {
+                        this.modalService.dismissAll();
+                        this.openModals(this.modalUpdateSuccessful, "");
+                    });
+                },
+            },
+        ],
+    };
+
+    public modalDeleteData: IResultOperation = {
+        img: "../../../../assets/Warning.png",
+        message: "Deseja realmente excluir esse membro",
+        buttons: [
+            {
+                label: "Confirmar e excluir o membro",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.memberService.deleteMemberById(this.itemParent.id).subscribe(() => {
+                        this.modalService.dismissAll();
+                        this.openModals(this.modalDeleteSuccessful, "");
+                        this.itemParent.remove();
                     });
                 },
             },
             {
                 label: "Cancelar",
-                class: "orange-button",
+                class: "orange-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalUpdateSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Membro editado com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
+                action: (): void => {
+                    this.modalService.dismissAll();
+                },
+            },
+        ],
+    };
+
+    public modalDeleteSuccessfulData: IResultOperation = {
+        img: "../../../../assets/Successful.png",
+        message: "Atividade excluída com sucesso!",
+        buttons: [
+            {
+                label: "Finalizar",
+                class: "dark-green-button modalResultOperationButton",
                 action: (): void => {
                     this.modalService.dismissAll();
                 },

@@ -6,3 +6,25 @@
 <ng-template #modalRegisterMember>
     <app-modal-register-member [propsModalRegister]="modalRegisterMemberData"></app-modal-register-member>
 </ng-template>
+
+<ng-template #modalRegisterSuccessful>
+    <app-modal-successful-operation [propsOperation]="modalRegisterSuccessfulData"></app-modal-successful-operation>
+</ng-template>
+
+
+<ng-template #modalUpdateElement>
+    <app-modal-register-member [propsModalRegister]="modalUpdateElementData"></app-modal-register-member>
+</ng-template>
+
+<ng-template #modalUpdateSuccessful>
+    <app-modal-successful-operation [propsOperation]="modalUpdateSuccessfulData"></app-modal-successful-operation>
+</ng-template>
+
+
+<ng-template #modalDelete>
+    <app-modal-successful-operation [propsOperation]="modalDeleteData"></app-modal-successful-operation>
+</ng-template>
+
+<ng-template #modalDeleteSuccessful>
+    <app-modal-successful-operation [propsOperation]="modalDeleteSuccessfulData"></app-modal-successful-operation>
+</ng-template>
