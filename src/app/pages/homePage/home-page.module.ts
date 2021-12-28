@@ -14,12 +14,13 @@ import { ListMemberAbsencesComponent } from "./lists/list-member-absences/list-m
 import { HomePageRoutingModule } from "./home-page-routing.module";
 import { ThemeModule } from "src/app/@theme/theme.module";
 import { RouterModule } from "@angular/router";
-import { AppRoutingModule } from "src/app/app-routing.module";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
+import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
+import { ActivitiesComponent } from "./activities/activities.component";
 
 @NgModule({
     declarations: [
@@ -30,6 +31,8 @@ import { MatCardModule } from "@angular/material/card";
         ManageButtonComponent,
         ListMemberActivitiesComponent,
         ListMemberAbsencesComponent,
+        RegisterActivityComponent,
+        ActivitiesComponent,
     ],
     imports: [
         MatButtonModule,
@@ -40,7 +43,6 @@ import { MatCardModule } from "@angular/material/card";
         HomePageRoutingModule,
         ThemeModule,
         RouterModule,
-        AppRoutingModule,
         MatTabsModule,
         MatSidenavModule,
         MatFormFieldModule,

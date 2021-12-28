@@ -1,5 +1,3 @@
-import { ListsComponent } from "./pages/homePage/lists/lists.component";
-import { HomePageComponent } from "./pages/homePage/home-page.component";
 import { NgModule, NgModuleFactory, Type } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginScreenComponent } from "./pages/login/login-screen/login-screen.component";
@@ -12,15 +10,6 @@ const routes: Routes = [
     {
         path: "login",
         component: LoginScreenComponent,
-    },
-    {
-        path: "Home",
-        component: HomePageComponent,
-        children: [
-            { path: "Listas", component: ListsComponent },
-            // { path: 'Atividades', component: ActivitiesComponent },
-            // { path: 'Membros', component: MembersComponent },
-        ],
     },
     { path: "**", redirectTo: "login" },
 ];

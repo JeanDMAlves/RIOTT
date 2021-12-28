@@ -16,7 +16,7 @@ export class LoginScreenComponent implements OnInit {
      */
     public ngOnInit(): void {
         if (this.localStorage.readToken()) {
-            this.router.navigate(["Home/"]);
+            this.router.navigate(["pages/home/"]);
         }
     }
 }
