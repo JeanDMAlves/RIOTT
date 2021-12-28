@@ -1,32 +1,17 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, TemplateRef, ViewChild } from "@angular/core";
+import { IMember } from "src/app/@theme/interfaces/IMember";
 
 @Component({
     selector: "app-lists",
     templateUrl: "./lists.component.html",
     styleUrls: ["./lists.component.css"],
 })
-export class ListsComponent {
+export class ListsComponent implements OnInit {
+    @ViewChild("modalBody") modalBody: TemplateRef<any>;
+    @ViewChild("modalDelete") modalDelete: TemplateRef<any>;
+    @ViewChild("modalDeleteSuccessful") modalDeleteSuccessful: TemplateRef<any>;
     public selectedId = 0;
-    public members = [
-        {
-            id: 0,
-            name: "Luisa Sousa",
-            discounts: "500",
-            allowance: "960",
-        },
-        {
-            id: 1,
-            name: "Luisa Sousa",
-            discounts: "500",
-            allowance: "960",
-        },
-        {
-            id: 2,
-            name: "Luisa Sousa",
-            discounts: "500",
-            allowance: "960",
-        },
-    ];
+    public members: IMember[];
     public membersActivities = [
         {
             activityValue: 300,
