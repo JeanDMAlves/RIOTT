@@ -24,3 +24,10 @@
     line-height: 19px;
     margin: 0;
 }
+
+.orange-button {
+    width: auto;
+    min-width: 75px;
+    max-width: 115px;
+    margin-right: 16px;
+}

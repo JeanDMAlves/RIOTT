@@ -1,15 +1,14 @@
-.atividades-header{
-    display: flex ;
+.activities-header {
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1.5rem;
 }
-.atividades-titulo{
-    font-family: Roboto;
-    font-style: normal;
+
+.activities-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    color: var(--greyscale-5);
-    margin:0;
+    color: var(--grayscale-5);
+    margin: 0;
 }

@@ -1,5 +1,6 @@
 /* estilo das labels */
-.mat-tab-labels, .mat-tab-link {
+.mat-tab-labels,
+.mat-tab-link {
     min-width: 25px !important;
     padding: 5px;
     color: var(--grayscale-4);
@@ -7,12 +8,14 @@
 }
 
 /* estilo da label Sair */
-.mat-tab-labels, .mat-tab-link:last-child {
+.mat-tab-labels,
+.mat-tab-link:last-child {
     color: var(--secondary-dark);
 }
 
 /* estilo da label selecionada */
-.mat-tab-labels, .mat-tab-link:focus {
+.mat-tab-labels,
+.mat-tab-link:focus {
     color: var(--primary-dark);
 }
 
@@ -23,6 +26,7 @@
     border-radius: 3px;
 }
 /* cor da barra inferior */
-.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background: var(--secondary-dark);
 }

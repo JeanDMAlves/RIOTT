@@ -10,9 +10,7 @@ import { environment } from "src/environments/environment";
 })
 export class AuthenticationService {
     private url: string = environment.apiURL;
-
     constructor(private http: HttpClient) {}
-
     private httpOptions = {
         headers: new HttpHeaders({
             "Content-Type": "application/json",

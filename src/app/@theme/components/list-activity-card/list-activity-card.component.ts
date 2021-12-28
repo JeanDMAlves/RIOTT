@@ -1,25 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { IButton } from "../../interfaces/IButton";
+import { IData } from "../../interfaces/IData";
 
 @Component({
-  selector: 'app-list-activity-card',
-  templateUrl: './list-activity-card.component.html',
-  styleUrls: ['./list-activity-card.component.css']
+    selector: "app-list-activity-card",
+    templateUrl: "./list-activity-card.component.html",
+    styleUrls: ["./list-activity-card.component.css"],
 })
-export class ListActivityCardComponent{
-	@Input() data: Idata[]; 
-	@Input() buttons: Ibutton[]; 
-	@Input() image;
-}
-
-export interface Idata{
-	key?: string,
-	title: string,
-	value: string
-}
-
-export interface Ibutton{
-	label: string,
-	class?: string,
-	icon?: string,
-	action?: string
+export class ListActivityCardComponent {
+    @Input() data: IData;
+    @Input() buttons: IButton[];
+    @Input() image: string;
+    @Input() status: "editable" | "readonly";
 }
