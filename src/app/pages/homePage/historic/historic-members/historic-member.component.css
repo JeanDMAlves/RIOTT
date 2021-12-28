@@ -1,4 +1,4 @@
-.member {
+.memberCard {
     background: var(--white);
     padding: 0;
     border: 0;
@@ -18,7 +18,7 @@
 }
 
 mat-card {
-    width: 300px;
+    width: 20vw;
     height: 88px;
     border: 2px solid var(--grayscale-2);
     border-radius: 4px;
@@ -35,7 +35,6 @@ mat-card {
 }
 
 .information-member {
-    flex-grow: 2;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;
@@ -56,4 +55,12 @@ mat-card-subtitle {
     font-size: 14px;
     line-height: 16px;
     text-align: left;
+}
+
+.members-image {
+    height: 38px;
+    width: 38px;
+    border-radius: 100%;
+    align-self: center;
+    margin-left: 1rem;
 }

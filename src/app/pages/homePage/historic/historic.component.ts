@@ -1,26 +1,17 @@
-import { Component } from "@angular/core";
+import { IMember } from "src/app/@theme/interfaces/IMember";
+import { MemberService } from "src/app/@core/services/member.service";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "app-historic",
     templateUrl: "./historic.component.html",
     styleUrls: ["./historic.component.css"],
 })
-export class HistoricComponent {
+export class HistoricComponent implements OnInit {
     public selectedId = 0;
-    public members = [
-        {
-            id: 0,
-            name: "Luisa Sousa",
-        },
-        {
-            id: 1,
-            name: "Clébinho",
-        },
-        {
-            id: 2,
-            name: "Áquila",
-        },
-    ];
+    public members: IMember[] = [];
+    constructor(private memberService: MemberService) {}
+
     public finishedLists = [
         {
             listName: "Lista ABC SHOW",
@@ -44,5 +35,13 @@ export class HistoricComponent {
 
     public setSelected(id: number): void {
         this.selectedId = id;
+    }
+
+    public ngOnInit(): void {
+        this.memberService.getMembers(1, 100, 1).subscribe((data) => {
+            for (const member of data["data"]["rows"]) {
+                this.members.push(member);
+            }
+        });
     }
 }

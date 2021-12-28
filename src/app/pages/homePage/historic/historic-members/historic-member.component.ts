@@ -1,3 +1,4 @@
+import { IMember } from "src/app/@theme/interfaces/IMember";
 import { Component, Input } from "@angular/core";
 
 @Component({
@@ -6,5 +7,5 @@ import { Component, Input } from "@angular/core";
     styleUrls: ["./historic-member.component.css"],
 })
 export class HistoricMemberComponent {
-    @Input() public name: string;
+    @Input() public member: IMember;
 }

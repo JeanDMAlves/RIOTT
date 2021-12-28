@@ -3,10 +3,11 @@
         <h2 class="titulo-historico-membros">Históricos:</h2>
         <div class="historico-membros">
             <app-historic-member class="item-historico-membros"
+            *ngFor="let member of members"
+            [member]="member"
             (click)="setSelected(member.id)"
             [class.selected]="member.id == selectedId"
-            *ngFor="let member of members"
-            [name]="member.name"></app-historic-member>
+            ></app-historic-member>
         </div>
     </mat-drawer>
 
