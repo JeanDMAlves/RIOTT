@@ -24,6 +24,8 @@ import { MemberBoxComponent } from "./members/member-box/member-box.component";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { ModalRegisterMemberComponent } from "./members/modal-register-member/modal-register-member.component";
+import { ActivitiesComponent } from "./activities/activities.component";
+import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
 
 @NgModule({
     declarations: [
@@ -39,6 +41,8 @@ import { ModalRegisterMemberComponent } from "./members/modal-register-member/mo
         MembersComponent,
         MemberBoxComponent,
         ModalRegisterMemberComponent,
+        ActivitiesComponent,
+        RegisterActivityComponent,
     ],
     imports: [
         MatNativeDateModule,

@@ -1,17 +1,5 @@
-mat-drawer-container {
-    height: 85vh;
-    width: 90%;
-    margin: 1.5rem auto 0 auto;
-}
-
-mat-drawer {
-    width: max-content;
-}
-
 .titulo-lista-membros {
     color: var(--grayscale-5);
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
@@ -29,14 +17,11 @@ mat-drawer {
     margin-right: 8px;
 }
 
-mat-drawer-content {
-    background: var(--white);
-}
-
 .lista-atividades {
     width: 95%;
     height: 74px;
     margin: 0 auto;
+    margin-left: 2rem;
 }
 
 .lista-atividades-titulo {
@@ -65,4 +50,17 @@ mat-drawer-content {
 .item-lista-membros {
     margin-bottom: 10px;
     height: 125px;
+}
+
+.member-screen {
+    display: flex;
+    height: 80vh;
+    width: 90%;
+    margin: 3rem auto 0 auto;
+}
+
+.member-cards {
+    margin-right: 2rem auto;
+    border-right: var(--grayscale-2) 1px solid;
+    height: 100%;
 }
