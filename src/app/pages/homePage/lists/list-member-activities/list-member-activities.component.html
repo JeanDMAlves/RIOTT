@@ -5,7 +5,7 @@
     </div>
     <div class="valor-item">
         <h4 class="header-item">Valor:</h4>
-        <p class="content-item">R$ {{activityValue}}</p>
+        <p class="content-item">{{activityValue | currency:'BRL'}}</p>
     </div>
     <div >
         <button mat-button class="solid-orange-button" id="button" (click)="onclick()" *ngIf="activityDone==1">

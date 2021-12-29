@@ -6,21 +6,21 @@
     <div class="lista-atividades-pagamento">
         <div class="lista-atividades-pagamento-mesada">
             <h5>Mesada:</h5>
-            <p>R$ {{allowance}}</p>
+            <p>{{allowance | currency:'BRL'}}</p>
         </div>
 
         <p>-</p>
 
         <div class="lista-atividades-pagamento-descontos">
             <h5>Descontos:</h5>
-            <p>R$ {{discounts}}</p>
+            <p>{{discounts | currency:'BRL'}}</p>
         </div>
 
         <p>=</p>
 
         <div class="lista-atividades-pagamento-total">
             <h5>Total:</h5>
-            <p>R$ {{getTotalPaid()}}</p>
+            <p>{{getTotalPaid() | currency:'BRL'}}</p>
         </div>
     </div>
     <div>
