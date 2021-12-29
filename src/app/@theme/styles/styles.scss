@@ -32,7 +32,11 @@ body {
     }
     /* Cor da caixa ao dar inserir campo invalido */
     .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-        color: var(--primary-dark);
+        color: var(--grayscale-4);
+    }
+
+    .ng-star-inserted {
+        color: var(--grayscale-4);
     }
 
     ::-webkit-scrollbar {
@@ -101,6 +105,23 @@ body {
         width: 100%;
         margin: 0;
         margin-top: 80px;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-prefix {
+        top: 0;
+    }
+
+    .cdk-overlay-container {
+        z-index: 10000000000;
+        position: fixed;
+    }
+
+    .mat-calendar-body-selected {
+        background-color: var(--primary-dark);
+    }
+
+    .mat-datepicker-toggle-active {
+        color: var(--primary-dark);
     }
 }
 

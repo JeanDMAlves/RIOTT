@@ -19,8 +19,11 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
-import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
-import { ActivitiesComponent } from "./activities/activities.component";
+import { MembersComponent } from "./members/members.component";
+import { MemberBoxComponent } from "./members/member-box/member-box.component";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
+import { ModalRegisterMemberComponent } from "./members/modal-register-member/modal-register-member.component";
 
 @NgModule({
     declarations: [
@@ -31,11 +34,15 @@ import { ActivitiesComponent } from "./activities/activities.component";
         ManageButtonComponent,
         ListMemberActivitiesComponent,
         ListMemberAbsencesComponent,
-        RegisterActivityComponent,
-        ActivitiesComponent,
+        NavigationHeaderComponent,
+        HomePageComponent,
+        MembersComponent,
+        MemberBoxComponent,
+        ModalRegisterMemberComponent,
     ],
     imports: [
-        MatButtonModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
         NgbModule,
         CommonModule,
         ReactiveFormsModule,
@@ -48,6 +55,7 @@ import { ActivitiesComponent } from "./activities/activities.component";
         MatFormFieldModule,
         MatInputModule,
         MatCardModule,
+        MatButtonModule,
     ],
 })
 export class HomePageModule {}
