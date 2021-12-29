@@ -1,11 +1,6 @@
-mat-drawer-container {
-    height: 85vh;
-    width: 90%;
-    margin: 1.5rem auto 0 auto;
-}
-
-mat-drawer {
-    width: max-content;
+.historico {
+    display: flex;
+    width: 77%;
 }
 
 .titulo-historico-membros {
@@ -19,7 +14,6 @@ mat-drawer {
 .historico-membros {
     display: flex;
     flex-direction: column;
-    height: 80%;
     overflow-y: auto;
     overflow-x: auto;
     margin-bottom: 5px;
@@ -27,14 +21,12 @@ mat-drawer {
     margin-right: 8px;
 }
 
-mat-drawer-content {
-    background: var(--white);
-}
-
-.historico-listas {
+.listas {
     width: 95%;
     height: 74px;
     margin: 0 auto;
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 .historico-listas-titulo {
@@ -63,4 +55,12 @@ mat-drawer-content {
 .item-historico-membros {
     margin-bottom: 10px;
     height: 92px;
+}
+
+.membros {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-right: 2rem auto;
+    border-right: var(--grayscale-2) 1px solid;
+    height: 100%;
 }

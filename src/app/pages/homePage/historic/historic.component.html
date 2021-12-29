@@ -1,5 +1,5 @@
-<mat-drawer-container>
-    <mat-drawer mode="side" opened>
+<div class="historico">
+    <div class="membros">
         <h2 class="titulo-historico-membros">Históricos:</h2>
         <div class="historico-membros">
             <app-historic-member class="item-historico-membros"
@@ -9,10 +9,10 @@
             [class.selected]="member.id == selectedId"
             ></app-historic-member>
         </div>
-    </mat-drawer>
+    </div>
 
-    <mat-drawer-content>
-        <div class="historico-listas">
+    <div class="listas">
+        <div>
             <h3 class="historico-listas-titulo">Listas finalizadas:</h3>
             <div class="historico-listas-items">
                 <app-historic-finished-lists
@@ -24,5 +24,5 @@
                 ></app-historic-finished-lists>
             </div>
         </div>
-    </mat-drawer-content>
-</mat-drawer-container>
+    </div>
+</div>
