@@ -1,3 +1,4 @@
+import { ActivityListService } from "./../../../@core/services/activity-list.service";
 import { Component, OnInit } from "@angular/core";
 import { MemberService } from "src/app/@core/services/member.service";
 import { IMember } from "src/app/@theme/interfaces/IMember";
@@ -7,26 +8,18 @@ import { IMember } from "src/app/@theme/interfaces/IMember";
     styleUrls: ["./lists.component.css"],
 })
 export class ListsComponent implements OnInit {
-    public discounts: number = 0;
-    public selectedId = 0;
+    public selectedId: string;
     public members: IMember[] = [];
+    public membersTasks: any = [];
 
-    constructor(private memberService: MemberService) {}
+    constructor(private memberService: MemberService, private taskListService: ActivityListService) {}
 
-    public membersActivities = [
-        {
-            activityValue: 300,
-            activityDescription: "Tirar o lixo",
-        },
-        {
-            activityValue: 300,
-            activityDescription: "Tirar o lixo",
-        },
-        {
-            activityValue: 300,
-            activityDescription: "Tirar o lixo",
-        },
-    ];
+    public setSelected(id: string): void {
+        this.selectedId = id;
+        this.taskListService.getTaskListByMemberId(id).subscribe((data) => {
+            this.membersTasks = data["data"]["taskList"];
+        });
+    }
 
     public ngOnInit(): void {
         this.memberService.getMembers(1, 50, 1).subscribe((data) => {
@@ -35,9 +28,5 @@ export class ListsComponent implements OnInit {
                 this.members.push(member);
             }
         });
-    }
-
-    public setSelected(id: number): void {
-        this.selectedId = id;
     }
 }
