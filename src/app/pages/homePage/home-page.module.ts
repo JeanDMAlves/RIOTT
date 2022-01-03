@@ -26,6 +26,7 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { ModalRegisterMemberComponent } from "./members/modal-register-member/modal-register-member.component";
 import { ActivitiesComponent } from "./activities/activities.component";
 import { RegisterActivityComponent } from "./activities/register-activity/register-activity.component";
+import { ManageListModalComponent } from "./lists/manage-list-modal/manage-list-modal.component";
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import { RegisterActivityComponent } from "./activities/register-activity/regist
         ModalRegisterMemberComponent,
         ActivitiesComponent,
         RegisterActivityComponent,
+        ManageListModalComponent,
     ],
     imports: [
         MatNativeDateModule,

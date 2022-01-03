@@ -1,0 +1,24 @@
+<div class="manage-lists-screen">
+    <section class="active-members">
+        <h3 class="members-titles">Membros ativos</h3>
+        <div class="manage-lists-members">
+            <button mat-button 
+            class="manage-lists-members-button"
+            id="{{member.id}}"
+            *ngFor="let member of members">
+                <div class ="manage-lists-members-button-content"> 
+                    <img class="manage-lists-members-image" src="http://34.136.200.153/{{member.photo}}">
+                    <div>
+                        <h4 class="manage-lists-members-title">Membro:</h4>
+                        <p class="manage-lists-members-name">{{member.name}}</p>
+                    </div>
+                </div>   
+            </button>
+        </div>
+    </section>
+
+    <div class="manage-lists-tasks"> 
+       <h3 class="members-titles">Atividades</h3>
+       <app-list-member-activities></app-list-member-activities>
+    </div>
+</div>

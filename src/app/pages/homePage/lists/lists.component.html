@@ -10,7 +10,7 @@
             id="{{member.id}}"
             ></app-list-member-item>
         </div>
-        <app-manage-button></app-manage-button>
+        <app-manage-button [action]="manageButtonAction"></app-manage-button>
     </div>
 
     <div class="lista-atividades">
@@ -22,9 +22,14 @@
                 id = "{{item.taskId}}"
                 [tasksInformation]="membersTasks"
                 [taskItem]="item"
+                [showButton]="1"
                 ></app-list-member-activities>
             </div>
             <app-list-member-absences [selectedMemberId]="selectedId"></app-list-member-absences>
         </div>
     </div>
 </div>
+
+<ng-template #manageTaskList>
+    <app-manage-list-modal></app-manage-list-modal>
+</ng-template>

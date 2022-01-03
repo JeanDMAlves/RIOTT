@@ -10,6 +10,7 @@ import { Component, Input } from "@angular/core";
 export class ListMemberActivitiesComponent {
     @Input() tasksInformation: ITaskList;
     @Input() taskItem;
+    @Input() showButton: boolean;
 
     constructor(private taskListService: ActivityListService) {}
 

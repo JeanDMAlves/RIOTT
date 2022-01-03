@@ -1,0 +1,70 @@
+.manage-lists-screen {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.active-members {
+    margin-bottom: 1.5rem;
+}
+
+.members-titles {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--grayscale-5);
+}
+
+.manage-lists-members {
+    display: flex;
+    flex-flow: row;
+}
+
+.manage-lists-members-button {
+    width: 200px;
+    border: 1px solid var(--grayscale-2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 1rem;
+    padding: 1rem;
+}
+
+.manage-lists-members-button-content {
+    display: flex;
+    flex-flow: row;
+    margin-top: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.manage-lists-members-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    display: block;
+}
+
+.manage-lists-members-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grayscale-4);
+    text-align: left;
+    margin-bottom: 8px;
+}
+.manage-lists-members-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    color: var(--grayscale-5);
+    margin: 0;
+}
+
+.manage-lists-tasks {
+}
