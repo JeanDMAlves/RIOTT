@@ -8,6 +8,8 @@ export interface ITaskList {
     createdAt?: string;
     taskListItems: ITaskItem[];
     member?: IMember;
+    totalDiscount?: number;
+    failedTasks?: number;
 }
 
 export interface ITaskItem {

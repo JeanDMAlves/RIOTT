@@ -3,11 +3,17 @@
         <h3 class="members-titles">Membros ativos</h3>
         <div class="manage-lists-members">
             <button mat-button 
+            (click)="setSelected(member.id)"
+            [class.selectedMember]="member.id == selectedMemberId"
             class="manage-lists-members-button"
             id="{{member.id}}"
             *ngFor="let member of members">
                 <div class ="manage-lists-members-button-content"> 
-                    <img class="manage-lists-members-image" src="http://34.136.200.153/{{member.photo}}">
+                    <img
+                        [class.selectedMemberImage]="member.id == selectedMemberId" 
+                        class="manage-lists-members-image" 
+                        src="http://34.136.200.153/{{member.photo}}"
+                    >
                     <div>
                         <h4 class="manage-lists-members-title">Membro:</h4>
                         <p class="manage-lists-members-name">{{member.name}}</p>
@@ -17,8 +23,45 @@
         </div>
     </section>
 
-    <div class="manage-lists-tasks"> 
-       <h3 class="members-titles">Atividades</h3>
-       <app-list-member-activities></app-list-member-activities>
-    </div>
+	<ng-container [ngTemplateOutlet]="shownTemplate"></ng-container>
 </div>
+
+<ng-template #rawTasks>
+    <h3 class="members-titles">Atividades</h3>
+    <div class="manage-lists-tasks">
+        <app-list-activity-card
+        *ngFor="let task of tasks"
+        [data] = task>
+        </app-list-activity-card>
+    </div>
+</ng-template>
+
+<ng-template #memberSelectedTaskList>
+
+    <div class="status-task-list">
+        <div>
+            <h3 class="status-title">Status da lista:</h3>
+            <p 
+                [class.status-in-progress] = "selectedMemberTasks.status == 'Em andamento'"
+                [class.status-on-hold] = "selectedMemberTasks.status == 'Em espera'" 
+            class="status-content">{{selectedMemberTasks.status}}</p>
+        </div>
+        <div>
+            <button mat-button class="orange-button">Excluir lista</button>
+            <button mat-button class="light-green-button">Editar lista</button>
+            <button mat-button class="dark-green-button">Iniciar lista</button>
+        </div>
+    </div>
+    <div>
+        <h3 class="members-titles">Atividades</h3>
+        <div>
+            <app-list-member-activities
+                *ngFor="let item of selectedMemberTasks.taskListItems"
+                id = "{{item.taskId}}"
+                [tasksInformation]="selectedMemberTasks"
+                [taskItem]="item"
+                [showButton]="0">
+            </app-list-member-activities>
+        </div>
+    </div>
+</ng-template>
