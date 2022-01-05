@@ -124,15 +124,16 @@
 }
 
 .orange-button {
-    width: 30%;
+    max-width: 110px;
+    width: fit-content;
     margin-right: 16px;
 }
 
 .light-green-button {
     margin-right: 16px;
-    width: 30%;
+    width: fit-content;
 }
 
 .dark-green-button {
-    width: 30%;
+    width: fit-content;
 }

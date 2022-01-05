@@ -17,13 +17,15 @@
         <div>
             <h3 class="lista-atividades-titulo">Lista:</h3>
             <div class="lista-atividades-items">
-                <app-list-member-activities
-                *ngFor="let item of membersTasks.taskListItems"
-                id = "{{item.taskId}}"
-                [tasksInformation]="membersTasks"
-                [taskItem]="item"
-                [showButton]="1"
-                ></app-list-member-activities>
+                <div *ngIf="membersTasks.status == 'Em andamento'">
+                    <app-list-member-activities
+                    *ngFor="let item of membersTasks.taskListItems"
+                    id = "{{item.taskId}}"
+                    [tasksInformation]="membersTasks"
+                    [taskItem]="item"
+                    [showButton]="1"
+                    ></app-list-member-activities>
+                </div>
             </div>
             <app-list-member-absences [selectedMemberId]="selectedId"></app-list-member-absences>
         </div>
